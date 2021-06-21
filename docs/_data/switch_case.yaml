@@ -1,0 +1,304 @@
+switch_case_title: Switch Case / Menu Driven Programs
+programs:
+
+- title: |
+    Write a menu driven program to accept two numbers and perform any of the fundamental operations 
+    add, subtract, multiply or division as per user’s choice. 
+    **The user’s choice will be entered as an integer (1, 2, 3, 4)**
+
+  code: |
+    
+    import java.util.*;
+    public class  Switch_calc
+    {
+        public static void main()
+        {
+        
+        int option;
+        double a, b;
+        Scanner sc = new Scanner(System.in);
+        
+        // display the menu
+        System.out.println("----------------------");
+        System.out.println("         MENU         ");
+        System.out.println("----------------------");
+        System.out.println("1 to Add");
+        System.out.println("2 to Subtract");
+        System.out.println("3 to Multiply");
+        System.out.println("4 to Divide");
+        System.out.println("----------------------");
+        
+        // get the user's option
+        System.out.println("Enter your option");
+        option = sc.nextInt();
+        
+        // enter the numbers
+        System.out.println("Enter the first number");
+        a = sc.nextDouble();
+        System.out.println("Enter the second number");
+        b = sc.nextDouble();
+        
+        // check the option entered by the user
+        switch (option)
+        {
+            // 1 to Add
+            case 1:
+                System.out.println("Adding " + a + " and " + b);
+                System.out.println("Result = " + (a + b));
+                break;
+                
+            // 2 to subtract
+            case 2:
+                System.out.println("Subtracting " + a + " and " + b);
+                System.out.println("Result = " + (a - b));
+                break;
+                
+            // 3 to Multiply
+            case 3:
+                System.out.println("Multiplying " + a + " and " + b);
+                System.out.println("Result = " + (a * b));
+                break;
+            
+            // 4 to Divide
+            case 4:
+                System.out.println("Dividing " + a + " and " + b);
+                System.out.println("Result = " + (a / b));
+                break;
+        }
+
+        }
+    }
+
+- title: |
+    Write a menu driven program to accept two numbers and perform any of the fundamental operations 
+    add, subtract, multiply or division as per user’s choice. 
+    **The user’s choice will be entered as a character (+, -, *,  /)**
+
+  code: |
+    
+    import java.util.*;
+    public class  Calculator
+    {
+        public static void main()
+        {
+        char option;
+        double a, b;
+        Scanner sc = new Scanner(System.in);
+        
+        // display the menu
+        System.out.println("----------------------");
+        System.out.println("         MENU         ");
+        System.out.println("----------------------");
+        System.out.println("+ to Add");
+        System.out.println("- to Subtract");
+        System.out.println("* to Multiply");
+        System.out.println("/ to Divide");
+        System.out.println("----------------------");
+        
+        // get the user's option
+        System.out.println("Enter your option");
+        option = sc.next().charAt(0);
+        
+        // enter the numbers
+        System.out.println("Enter the first number");
+        a = sc.nextDouble();
+        System.out.println("Enter the second number");
+        b = sc.nextDouble();
+        
+        // check the option entered by the user
+        switch (option)
+        {
+            // + to Add
+            case '+':
+                System.out.println("Adding " + a + " and " + b);
+                System.out.println("Result = " + (a + b));
+                break;
+                
+            // - to subtract
+            case '-':
+                System.out.println("Subtracting " + a + " and " + b);
+                System.out.println("Result = " + (a - b));
+                break;
+                
+            // '*' to Multiply
+            case '*':
+                System.out.println("Multiplying " + a + " and " + b);
+                System.out.println("Result = " + (a * b));
+                break;
+            
+            // / to Divide
+            case '/':
+                System.out.println("Dividing " + a + " and " + b);
+                System.out.println("Result = " + (a / b));
+                break;
+            
+            default:
+                System.out.println("Invalid Option");
+        }
+
+        }
+    }
+- title: |
+    Based on the item type calculate the total amount including GST, refer to the table below
+
+    Item Type | GST Rate % 
+    --- | --- 
+    Grocery | 5 
+    Electronic | 18 
+    Textile | 12 
+    Vehicle | 28 
+    Other | 8 
+
+  code: |
+    
+    import java.util.*;
+    public class Gst
+    {
+        public static void main()
+        {
+        // declare variables
+        int option;
+        double price, total;
+        Scanner sc = new Scanner(System.in);
+        
+        // enter the price of the item
+        System.out.println("Enter the price of the item");
+        price = sc.nextDouble();
+        
+        // display the menu
+        System.out.println("----------------------------");
+        System.out.println("           MENU             ");
+        System.out.println("----------------------------");
+        System.out.println("1 for Grocery Item");
+        System.out.println("2 for Electronic Item");
+        System.out.println("3 for Textile Item");
+        System.out.println("4 for Vehicle Item");
+        System.out.println("5 for other Item");
+        
+        // enter the option
+        System.out.println("Enter the Item Type");
+        option = sc.nextInt();
+        
+        // check the option using a switch
+        switch(option)
+        {
+            case 1:
+                total = price + ((5*price)/100);
+                System.out.println("GST at 5%, Total = " + total);
+                break;
+            case 2:
+                total = price + ((18*price)/100);
+                System.out.println("GST at 18%, Total = " + total);
+                break;
+            case 3:
+                total = price + ((12*price)/100);
+                System.out.println("GST at 12%, Total = " + total);
+                break;
+            case 4:
+                total = price + ((28*price)/100);
+                System.out.println("GST at 28%, Total = " + total);
+                break;
+            case 5:
+                total = price + ((8*price)/100);
+                System.out.println("GST at 8%, Total = " + total);
+                break;
+            default:
+                System.out.println("Wrong Input");
+                break;
+        }
+        }
+    }
+
+- title: |
+    WAP to input the number of sides of a geometric figure and then display the type of the geometric figure.
+    The set of figures are given as follows
+
+    Number of sides | Name of figure
+    --- | ---
+    1 | Line
+    3 | Triangle
+    4 | Square or Rectangle
+    5 | Pentagon
+
+  code: |
+    
+    import java.util.*;
+    public class Figure
+    {
+        public static void main()
+        {
+        // declare variables
+        int sides;
+        
+        // take the input
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of sides");
+        sides = sc.nextInt();
+        
+        // check the value of the sides
+        switch(sides)
+        {
+            case 1:
+                System.out.println("Line");
+                break;
+            case 3:
+                System.out.println("Triangle");
+                break;
+            case 4:
+                System.out.println("Square or Rectangle");
+                break;
+            case 5:
+                System.out.println("Pentagon");
+                break;
+            default:
+                System.out.println("Not Defined");
+        }
+        }
+    }
+
+- title: |
+    Write a Menu Driven program to accept 2 numbers, num1 and num2.
+    Display the quotient or remainder on dividing num1 by num2 as per the users choice on the following options
+    **Q = Quotient , R = Remainder**
+
+  code: |
+    
+    import java.util.*;
+    public class QR
+    {
+        public static void main()
+        {
+        Scanner sc = new Scanner(System.in);
+        
+        //declare variables
+        float num1, num2;
+        char option;
+        
+        // take the inputs
+        System.out.println("Enter the first number");
+        num1 = sc.nextFloat();
+        
+        System.out.println("Enter the second number");
+        num2 = sc.nextFloat();
+        
+        // display menu
+        System.out.println("Q for Quotient, R for Remainder");
+        
+        // enter the option
+        System.out.println("Enter the option");
+        option = sc.next().charAt(0);
+        
+        // check the option
+        switch(option)
+        {
+            case 'Q':
+                System.out.println("Quotient = " + (num1 / num2));
+                break;
+            case 'R':
+                System.out.println("Remainder = " + (num1 % num2));
+                break;
+            default:
+                System.out.println("Wrong Option");
+        }
+        }
+    }

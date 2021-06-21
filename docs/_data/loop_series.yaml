@@ -1,0 +1,131 @@
+loop_series_title: Loop Programs based on Mathematical Series
+programs:
+
+- title: |
+    WAP to input a number **n** and print the **first n terms** of the following series
+    2,5,8,11,13,17,....uptil n terms
+    For example: If the value of n = 5, then your program should print out the following
+    2,5,8,11,13 (n = 5 terms)
+
+  code: ''
+
+- title: 
+    WAP to print out and also find the sum of the following series 
+    1 +11 + 111 + 1111 + .. uptil **n terms**
+    where **n** is taken as an input by the program
+
+  code: ''
+
+- title: |
+    WAP to print out and calculate the sumof the following series
+    1 - 1/2 + 1/3 - 1/4 + 1/5 -... 1/n
+    where **n** is a positive integer and input by user.
+
+  code: ''
+
+- title: |
+    WAP to take an input n from the user and find the sum of the following series
+    ½ + ¼ + ⅙ + ⅛ + 1/10 + 1/12 + …. + 1/2n
+    The value of n indicates the number of terms.
+    For example, if the input n = 5, then the series will be 
+    ½ + ¼ + ⅙ + ⅛ + 1/10 i.e. n = 5 terms
+
+  code: |
+    
+    import java.util.*;
+    public class Loops
+    {
+        public static void main()
+        {
+        int n;
+        float i, a, s = 0;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter thember");
+        n = sc.nextInt();
+        
+        for (i = 1; i<= n; i++)
+        {
+            a = (1/(2*i));
+            s += a;
+            System.out.println(a);
+        }
+        System.out.println("Sum of the numbers = " + s);
+        }
+    }
+
+- title: |
+    WAP to input a number **n** and print the **first n terms** of the following series
+    0, 3, 8, 15, 24, 35, 48, 63, 80, 99....uptil n terms
+    For example: If the value of n = 4, then your program should print out the following
+    0,3,8,15 (n = 4 terms)
+
+  code: ''
+
+- title: |
+    Take an input n from the user and find out the sum of the following series
+    ½ + ⅔ + ¾ + ⅘ + … till n number of terms
+    For example, if the value of n = 5, then the series will be
+    ½ + ⅔ + ¾+ ⅘ + ⅚ (so, the series will have 5 terms)
+  
+  code: |
+    
+    import java.util.*;
+    public class Loops
+    {
+        public static void main()
+        {
+        int n;
+        float i, a, s = 0;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter thember");
+        n = sc.nextInt();
+        
+        for (i = 1; i<= n; i++)
+        {
+            a = (i/(i + 1));
+            s += a;
+            System.out.println(a);
+        }
+        System.out.println("Sum of the numbers = " + s);
+        }
+    }
+
+- title: |
+    Take an input n from the user and find out the sum of the following series
+    2/1 + 3/2 +4/3 + 5/4 + … till n number of terms
+    For example, if the value of n = 5, then the series will be
+    2/1 + 3/2 + 4/3+ 5/4 + 6/5 (so, the series will have 5 terms)
+  
+  code: ''
+
+- title: |
+    Take an input n from the user and find the sum of the following series till n terms
+    ⅕ + 1/10 + 1/15 + 1/20 + …. Till n terms.
+    So, for example if the input of n = 6, the series will have 6 terms which are
+    ⅕ + 1/10 + 1/15 + 1/20 + 1/25 + 1/30
+
+  code: |
+    
+    import java.util.*;
+    public class Loops
+    {
+        public static void main()
+        {
+        int n;
+        float i, a, s = 0;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter thember");
+        n = sc.nextInt();
+        
+        for (i = 1; i<= n; i++)
+        {
+            a = (1/(5*i));
+            s += a;
+            System.out.println(a);
+        }
+        System.out.println("Sum of the numbers = " + s);
+        }
+    }

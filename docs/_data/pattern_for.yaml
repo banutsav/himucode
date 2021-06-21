@@ -1,0 +1,45 @@
+loop_series_title: Pattern Generation Programs using For loops
+programs:
+
+- title: |
+    WAP to input a number **n** and print the following pattern uptil n lines
+    >1<br>
+    11<br>
+    111<br>
+    1111<br>
+    11111<br>
+    111111<br>
+    In this example **n = 6**
+  code:
+
+- title: |
+    WAP to input a number **n** and print the following pattern uptil n lines
+    >1<br>
+    12<br>
+    123<br>
+    1234<br>
+    12345<br>
+    123456<br>
+    In this example **n = 6**
+  code:
+
+
+- title: |
+    WAP to input a number **n** and print the following pattern uptil n lines
+    >1<br>
+    22<br>
+    333<br>
+    4444<br>
+    55555<br>
+    In this example **n = 5**
+  code:
+
+- title: |
+    WAP to input a number **n** and print the following pattern uptil n lines
+    >1<br>
+    10<br>
+    101<br>
+    1010<br>
+    10101<br>
+    In this example **n = 5**
+  code:

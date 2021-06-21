@@ -1,0 +1,182 @@
+range_ifelse_title: Range Based If Else
+programs:
+
+- title: |
+    WAP to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. 
+    Calculate percentage and grade according to following
+    - Percentage >= 90% : Grade A
+    - Percentage >= 80% : Grade B
+    - Percentage >= 70% : Grade C
+    - Percentage >= 60% : Grade D
+    - Percentage >= 40% : Grade E
+    - Percentage < 40%  : Grade F
+
+
+  code: |
+    
+    import java.util.*;
+    public class Exam
+    {
+      public static void main()
+      {
+        // declare variables for all marks
+        int physics, chemistry, biology, maths, computer;
+        float total;
+        
+        Scanner sc = new Scanner(System.in);
+        
+        // take the inputs for all marks        
+        System.out.println("Enter the marks in Physics");
+        physics = sc.nextInt();
+        
+        System.out.println("Enter the marks in Chemistry");
+        chemistry = sc.nextInt();
+        
+        System.out.println("Enter the marks in Biology");
+        biology = sc.nextInt();
+        
+        System.out.println("Enter the marks in Maths");
+        maths = sc.nextInt();
+        
+        System.out.println("Enter the marks in Computer");
+        computer = sc.nextInt();
+        
+        // calculate total percentage
+        total = (physics + chemistry + biology + maths + computer)/5;
+        
+        // print out the total marks
+        System.out.println("Total = " + total);
+        
+        // check the total marks
+        if (total >= 90)
+            System.out.println("Grade A");
+        else if ((total >= 80) && (total < 90))
+            System.out.println("Grade B");
+        else if ((total >= 70) && (total < 80))
+            System.out.println("Grade C");
+        else if ((total >= 60) && (total < 70))
+            System.out.println("Grade D");
+        else if ((total >= 40) && (total < 60))
+            System.out.println("Grade E");
+        else
+            System.out.println("Grade F");
+      }
+    }
+
+  python: |
+
+    p = int(input('enter marks in physics: '))
+    c = int(input('enter marks in chemistry: '))
+    b = int(input('enter marks in biology: '))
+    m = int(input('enter marks in maths: '))
+    cm = int(input('enter marks in computers: '))
+
+    percent = (p + c + b + m + cm)/5
+
+    print('percentage marks =', percent)
+
+    if percent >= 90 and percent <= 100:
+        print('grade A')
+    elif percent >= 80 and percent < 90:
+        print('grade B')
+    elif percent >= 70 and percent < 80:
+        print('grade C')
+    elif percent >= 60 and percent < 70:
+        print('grade D')
+    elif percent >= 40 and percent < 60:
+        print('grade E')
+    elif percent >= 0 and percent < 40:
+        print('grade F')
+    else:
+        print('incorrect input')
+
+- title: |
+    WAP to take the age of a person and the principal amount taken as loan by the person.
+    Depending on the age, calculate the simple interest that has to be payable by the person based on the conditions below
+
+    *If Age is below 60*
+
+    | Time in Years | Rate of Interest |
+    | --- | --- |
+    | <= 5 | 4.5 |
+    | 6 to 10 | 6 |
+    | > 10 | 8.5 |
+
+    *If Age is equal or above 60*
+
+    | Time in Years | Rate of Interest |
+    | --- | --- |
+    | <= 5 | 6 |
+    | 6 to 10 | 8.5 |
+    | > 10 | 10 |
+
+  code: ''
+
+- title: |
+    WAP to input basic salary of an employee and calculate its Gross salary according to following:
+    - Basic Salary <= 10000 : HRA = 20%, DA = 80%
+    - Basic Salary <= 20000 : HRA = 25%, DA = 90%
+    - Basic Salary > 20000 : HRA = 30%, DA = 95%
+
+
+  code: |
+    
+    import java.util.*;
+    public class Salary
+    {
+      public static void main()
+      {
+        // declare variables
+        int basic, hra, da, total;
+        
+        Scanner sc = new Scanner(System.in);
+        
+        // take the inputs        
+        System.out.println("Enter the Basic Salary");
+        basic = sc.nextInt();
+        
+        // check the total marks
+        if (basic <= 10000)
+        {
+            hra = (20*basic)/100;
+            da = (80*basic)/100;
+        }
+        else if ((basic > 10000) && (basic <= 20000))
+        {
+            hra = (25*basic)/100;
+            da = (90*basic)/100;
+        }
+        else
+        {
+            hra = (30*basic)/100;
+            da = (95*basic)/100;
+        }
+        
+        // print out the HRA and the DA
+        System.out.println("HRA = " + hra);
+        System.out.println("DA = " + da);
+        
+        // calculate total
+        total = basic + da + hra;
+        System.out.println("Total Salary = " + total);
+      }
+    }
+
+  python: |
+
+    b = int(input('enter the basic salary : '))
+    if b > 0 and b <= 100000:
+        da = (20 * b)/100
+        hra = (80 * b)/100
+    elif b > 100000 and b <= 200000:
+        da = (25 * b)/100
+        hra = (90 * b)/100
+    elif b > 200000:
+        da = (30 * b)/100
+        hra = (95 * b)/100
+
+    print('DA =', da)
+    print('HRA =', hra)
+    total = b + da + hra
+
+    print('total salary =', total)

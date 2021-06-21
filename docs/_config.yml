@@ -1,0 +1,33 @@
+# Setup
+title:               Himucode
+tagline:             'for kids'
+
+description:         'This website as a collection of questions and answers for kids who are 
+just starting to program. If you want to schedule online classes for your kids 
+then Get in Touch'
+
+url:                 "https://banutsav.github.io"
+baseurl:             "/himucode"
+paginate:            5
+permalink:           pretty
+
+# About/contact
+author:
+  name:              Utsav Banerjee
+  url:               https://banutsav.github.io
+  email:             utsavb7@gmail.com
+  phone:             +919875591823
+  trade:             Freelance Software Developer
+
+# Feedback G-Form Link
+feedback_form:       "https://docs.google.com/forms/d/e/1FAIpQLScuCCpKV8qC9olmfP1inN7Xht99wj7mW5LHOoOOdPutsP5wRQ/viewform"
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# Custom vars
+version:             1.1.0
+google_analytics_id: #UA-XXXX-Y
+
+pending:             'Oops! solution pending...'

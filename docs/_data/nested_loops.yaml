@@ -1,0 +1,26 @@
+nested_loops_title: Nested Loop Programs
+programs:
+
+- title: |
+    Take 2 inputs from the user, **START** and **COUNT** - both integers
+    WAP, which prints out COUNT number of prime numbers starting from START
+    For example - let's say the user inputs **START = 72** and **COUNT = 5**
+    Then your program should print out the **first 5 prime numbers starting from 72**
+    So the output should be **73, 79, 83, 89, 97**
+
+  code: ''
+
+- title: |
+    WAP to input a number and print the sum of the factorial of it's digits
+    For example, if the number **n = 243**, 
+    then the program should print out **2! + 4! + 3! = 2 + 24 + 6 = 32**
+
+- title: |
+    WAP to calculate the largest 2 digit prime number
+
+  code: ''
+
+- title: |
+    WAP to calculate the largest 3 digit prime number
+
+  code: ''

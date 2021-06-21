@@ -1,0 +1,430 @@
+regular_ifelse_title: Regular If Else
+programs:
+
+- title: |
+    WAP to input the cost price and selling price.
+    Determine how much was the profit or loss and what was the profit or loss percentage
+
+  code: |
+    
+    import java.util.*;
+    public class ProfitLoss
+    {
+        public static void main()
+        {
+        // initialize variables
+        double cost_price, selling_price, difference, percent;
+        
+        Scanner sc = new Scanner(System.in);
+        
+        // take inputs
+        System.out.println("Enter the Cost Price");
+        cost_price = sc.nextDouble();
+        
+        System.out.println("Enter the Selling Price");
+        selling_price = sc.nextDouble();
+        
+        // check if profit
+        if (selling_price > cost_price)
+        {
+            difference = selling_price - cost_price;
+            percent = (difference * 100)/cost_price;
+            System.out.println("Profit = " + difference);
+            System.out.println("Profit Percentage = " + percent);
+        }
+        
+        // check if loss
+        else if (cost_price > selling_price)
+        {
+            difference = cost_price - selling_price;
+            percent = (difference * 100)/cost_price;
+            System.out.println("Loss = " + difference);
+            System.out.println("Loss Percentage = " + percent);
+        }
+        
+        // neither profit nor loss
+        else
+        {
+            System.out.println("No Profit or Loss");
+        }
+        }
+    }
+
+  python: |
+
+    cp = int(input("enter the cost price: "))
+    sp = int(input("enter the selling price: "))
+    if sp > cp:
+        profit = sp - cp
+        print("profit =", profit)
+        pp = ((profit/cp)*100)
+        print("profit % =", pp)
+    elif cp > sp:
+        loss = cp - sp
+        print("loss =", loss)
+        lp = ((loss/cp)*100)
+        print("loss % =", lp)
+    else:
+        print("no profit no loss")
+
+- title: |
+    WAP to input an integer and check if its last digit is odd or even.
+    - **ex:** if input is 3459 (9 is the last digit and it is odd)
+    - **ex:** if input 264 (4 is the last digit and it is even)
+
+  code: ''
+
+  python: |
+
+    n = int(input("enter a number: "))
+    last = n%10
+    print("last digit =", last)
+    if last % 2 == 0:
+        print("even")
+    else:
+        print("odd")
+
+- title: |
+    WAP in java to input the temperature in fahrenheit. 
+    Then convert the temperature into celsius and check if the temperature is above the boiling point of water or not
+
+  code: ''
+
+  python: |
+    
+    f = int(input('enter temperature in farenheit: '))
+    c = ((f - 32) * 5)/9
+    print('temperature in celsius:', c)
+    if c >= 100:
+        print('above the boiling point of water')
+    else:
+        print('below the boilng point of water')
+
+
+- title: |
+    WAP to input 2 numbers
+    - Print out the sum of the 2 numbers if both of them are odd
+    - Print out the product of the 2 numbers if both of them are even
+
+  code: ''
+
+  python: |
+
+    a = int(input('enter the first number: '))
+    b = int(input('enter the second number: '))
+    if a % 2 == 0 and b % 2 == 0:
+        print(a*b)
+    elif a % 2 != 0 and b % 2 != 0:
+        print(a + b)
+    else:
+        print('one is odd and the other is even')
+
+- title: |
+    WAP to input a 2 digit number and check if both it’s digits are odd or even
+  
+  code: |
+    
+    import java.util.*;
+    class if_else
+    {
+        public static void main()
+        {
+        Scanner j= new Scanner(System.in);
+        int a,b,c;
+        System.out.println("enter the number");
+        a= j.nextInt();
+        b=a%10;
+        c=a/10;
+        if((b%2==0)&&(c%2==0))
+        {
+            System.out.println("both the digits are even");
+        }
+        else if((b%2!=0)&&(c%2!=0))
+        {
+            System.out.println("both the digits are odd");
+        
+        }
+        else if((b%2==0)&&(c%2!=0))
+        {
+            System.out.println(b+" is the even digit" +c+ " is the odd digit");
+        }
+            
+    
+        else
+        {
+            System.out.println(b+" is the odd digit" +c+ " is the even digit");
+        }
+        }
+    }
+
+  python: |
+
+    a = int(input('enter a 2 digit number: '))
+    d1 = a % 10
+    d2 = int(a / 10)
+    print('digits are', d1, d2)
+    if d1 % 2 == 0 and d2 % 2 == 0:
+        print('both digits even')
+    elif d1 % 2 != 0 and d2 % 2 != 0:
+        print('both digits odd')
+    else:
+        print('one digit odd and the other digit even')
+
+- title: |
+    WAP to find the maximum of 2 numbers
+
+  code: |
+    
+    import java.util.*;
+    public class Max2
+    {
+      public static void main()
+      {
+        int a, b;
+        Scanner sc = new Scanner(System.in);
+        
+        // take inputs
+        System.out.println("Enter the first number");
+        a = sc.nextInt();
+        System.out.println("Enter the second number");
+        b = sc.nextInt();
+        
+        // check numbers
+        if (a > b)
+            System.out.println(a + " is the bigger number");
+        else if (b > a)
+            System.out.println(b + " is the bigger number");
+        else
+            System.out.println("Both numbers are equal");
+      }
+    }
+
+  python: |
+    
+    a = int(input('enter the first number :'))
+    b = int(input('enter the second number :'))
+    if a > b:
+        print(a, 'is the bigger number')
+    elif b > a:
+        print(b, 'is the bigger number')
+    else:
+        print('both numbers are the same')
+
+
+- title: |
+    WAP to find the maximum of 3 numbers    
+
+  code: |
+    
+    import java.util.*;
+    public class Max3
+    {
+      public static void main()
+      {
+        int a, b, c;
+        Scanner sc = new Scanner(System.in);
+        
+        // take inputs
+        System.out.println("Enter the first number");
+        a = sc.nextInt();
+        System.out.println("Enter the second number");
+        b = sc.nextInt();
+        System.out.println("Enter the third number");
+        c = sc.nextInt();
+        
+        // check numbers
+        if ((a >= b) && (a >= c))
+            System.out.println(a + " is the bigger number");
+        else if ((b >= a) && (b >= c))
+            System.out.println(b + " is the bigger number");
+        else
+            System.out.println(c + " is the bigger number");
+      }
+    
+    }
+
+  python: |
+
+    a = int(input('enter the first number :'))
+    b = int(input('enter the second number :'))
+    c = int(input('enter the third number :'))
+
+    if (a >= b) and (a >= c):
+        largest = a
+    elif (b >= a) and (b >= c):
+        largest = b
+    else:
+        largest = c
+
+    print(largest, 'is the largest number')
+
+
+- title: |
+    WAP to input all sides of a triangle and check whether the triangle is equilateral, isosceles or scalene
+
+  code: |
+    
+    import java.util.*;
+    public class TriangleType
+    { 
+      public static void main()
+      {
+        // 3 variables for the 3 sides
+        int a, b, c;
+        
+        Scanner sc = new Scanner(System.in);
+        
+        // take inputs
+        System.out.println("Enter the first side");
+        a = sc.nextInt();
+        
+        System.out.println("Enter the second side");
+        b = sc.nextInt();
+        
+        System.out.println("Enter the third side");
+        c = sc.nextInt();
+        
+        // Check for equilateral triangle 
+        if (a == b && b == c ) 
+            System.out.println("Equilateral Triangle"); 
+  
+        // Check for isosceles triangle 
+        else if (a == b || b == c || c == a ) 
+            System.out.println("Isosceles Triangle"); 
+  
+        // Otherwise scalene triangle 
+        else
+            System.out.println("Scalene Triangle");
+      }
+    }
+
+  python: |
+
+    a = int(input('enter the first side :'))
+    b = int(input('enter the second side :'))
+    c = int(input('enter the third side :'))
+
+    if a == b and b == c :
+        print('Equilateral Triangle') 
+    elif a == b or b == c or c == a :
+        print('Isosceles Triangle')
+    else:
+        print('Scalene Triangle')
+
+
+- title: |
+    WAP to check whether a number is positive, negative or zero
+
+  code: |
+    
+    import java.util.*;
+    public class PositiveNegative
+    {
+      public static void main()
+      {
+        int a;
+        Scanner sc = new Scanner(System.in);
+        
+        // take inputs
+        System.out.println("Enter the number");
+        a = sc.nextInt();
+        
+        // check number
+        if (a > 0)
+            System.out.println("Positive");
+        else if (a < 0)
+            System.out.println("Negative");
+        else
+            System.out.println("Zero");
+      }
+    
+
+    }
+
+  python: |
+
+    a = int(input('enter the number :'))
+    if a > 0:
+        print('positive')
+    elif a < 0:
+        print('negative')
+    else:
+        print('zero')
+
+- title: |
+    WAP to check whether a number is divisible by 5 AND 11 or not
+  code: |
+    
+    import java.util.*;
+    public class Divisible5and11
+    {
+
+      public static void main()
+      {
+        int a;
+        Scanner sc = new Scanner(System.in);
+        
+        // take inputs
+        System.out.println("Enter the number");
+        a = sc.nextInt();
+        
+        // check if divisible by both 5 and 11
+        if ((a % 5 == 0) && (a % 11 == 0))
+            System.out.println("Divisible by BOTH 5 and 11");
+        else
+            System.out.println("Not divisible by BOTH 5 and 11");
+      }
+    
+    }
+
+  python: |
+
+    a = int(input('enter the number :'))
+    if a % 5 == 0 and a % 11 == 0:
+        print('divisible by both 5 and 11')
+    else:
+        print('not divisible by both 5 and 11')
+
+- title: |
+    WAP to input angles of a triangle and check whether triangle is valid or not
+
+  code: |
+    
+    import java.util.*;
+    public class AnglesOfTriangle
+    {
+      public static void main()
+      {
+        // 3 variables for the 3 angles
+        int a, b, c;
+        
+        Scanner sc = new Scanner(System.in);
+        
+        // take inputs
+        System.out.println("Enter the first angle");
+        a = sc.nextInt();
+        
+        System.out.println("Enter the second angle");
+        b = sc.nextInt();
+        
+        System.out.println("Enter the third angle");
+        c = sc.nextInt();
+        
+        // sum must be equal to 180
+        if ((a + b + c) == 180)
+            System.out.println("Triangle is Valid");
+        else
+            System.out.println("Triangle is NOT Valid");
+      }
+    }
+
+  python: |
+
+    a = int(input('enter the first angle: '))
+    b = int(input('enter the second angle: '))
+    c = int(input('enter the third angle: '))
+
+    if a + b + c == 180:
+        print('triangle is valid')
+    else:
+        print('triangle is not valid')

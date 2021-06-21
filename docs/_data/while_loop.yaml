@@ -1,0 +1,27 @@
+single_for_title: While Loop Programs
+programs:
+
+- title: |
+    WAP to take a number (n) as input and then find the sum of all it's digits. 
+    For example if the input **n = 2673**, then the output should be **18 i.e. 2 + 6 + 7 + 3** 
+  
+  code: ''
+
+  python: |
+    
+    n = int(input('enter the number  : '))
+    s = 0
+    while n != 0:
+      d = n % 10
+      n = int(n / 10)
+      s += d
+    print('sum of digits =', s)
+
+
+- title: |
+    An **Armstrong number** of 3 digits is a 3-digit number
+    , the sum of cubes of each digits is equal to the number itself. 
+    For example: **153 = 1x1x1 + 5x5x5 + 3x3x3**
+    <br>WAP to input a 3 digit number and check if it is an Armstrong Number
+
+  code: ''

@@ -1,0 +1,223 @@
+slab_ifelse_title: Range Based If Else
+programs:
+
+- title: |
+    WAP program to input electricity unit charges and calculate total electricity bill according to the given condition:
+    - For first 50 units Rs. 0.50/unit
+    - For next 100 units Rs. 0.75/unit
+    - For next 100 units Rs. 1.20/unit
+    - For unit above 250 Rs. 1.50/unit
+    An additional surcharge of 20% is added to the bill
+
+  code: |
+    
+    import java.util.*;
+    class slab_1
+    {
+        public static void main()
+        {
+            Scanner j= new Scanner(System.in);
+            double a,b,c;
+            System.out.println("enter the total electricity units");
+            a = j.nextDouble();
+        
+            if(a<=50)
+            {
+                b=(0.5*a);
+            }
+            else if((a>50)&&(a<=150))
+            {
+                b=(50*0.5)+((a-50)*0.75);
+            }
+            else if((a>150)&&(a<=250))
+            {
+                b=(50*0.5)+(100*0.75)+((a-150)*1.2);
+            }
+            else 
+            {
+                b=(50*0.5)+(100*0.75)+(100*1.2)+((a-250)*1.5);
+            }
+            
+            c = ((20*b)/100)+b;
+            System.out.println(c+" is your total bill");
+        }
+    }
+
+  python: |
+
+    a = int(input('enter the units consumed  : '))
+    if a <= 50:
+        b = (0.5*a)
+    elif a > 50 and a <= 150:
+        b = (50*0.5) + ((a-50)*0.75)
+    elif a > 150 and a <= 250:
+        b = (50*0.5) + (100*0.75) + ((a-150)*1.2)
+    else:
+        b = (50*0.5) + (100*0.75) + (100*1.2) + ((a-250)*1.5)
+
+    print('basic bill :', b)
+    c = ((20*b)/100) + b
+    print('total bill :', c)
+
+- title: |
+    WAP to calculate the tax the person has to pay, based on their income.
+    - If the income is less than 2,50,000 there is no tax. 
+    - If the income is above 2,50,000 but below 5,00,000 : the tax will be 5% of the income above 2,50,000. 
+    - If the income is above 5,00,000 but less than 10,00,000 : their tax will be 10% of the income above 500,000 + tax for the slab 250,001 to 500,000
+    - Lastly, If the income is above 10,00,000 : their tax will be 15% of the income above 10,00,000 + tax for the slab 5,00,001 to 10,00,000 + tax for the slab 250,001 to 500,000
+  
+  code: |
+    
+    import java.util.*;
+    class slab_based_2
+    {
+        public static void main()
+        {
+            Scanner j= new Scanner(System.in);
+            double a,b;
+            System.out.println("enter the income");
+            a = j.nextDouble();
+            b = 0;
+            if(a<=250000)
+            {
+                b=0;
+            }
+            else if((a>250000)&&(a<=500000))
+            {
+                b=(((a-250000)*5)/100);
+            }
+            else if((a>500000)&&(a<=1000000))
+            {
+                b=((250000*5)/100)+(((a-500000)*10)/100);
+            }
+            else if(a>1000000)
+            {
+                b=((250000*5)/100)+((500000*10)/100)+(((a-1000000)*15)/100);
+            }
+            System.out.println("total tax is  " +b);
+        }
+    }
+
+  python: |
+
+    a = int(input('enter the income  : '))
+
+    if a <= 250000:
+      b = 0
+    elif a > 250000 and a <= 500000:
+      b = ((a-250000)*5)/100
+    elif a > 500000 and a <= 1000000:
+      b = ((250000*5)/100)+(((a-500000)*10)/100)
+    elif a > 1000000:
+      b = ((250000*5)/100) + ((500000*10)/100) + (((a-1000000)*15)/100)
+
+    print('tax =', b)
+
+- title: |
+    The **calorie consumed per minute (CCM)** is a unit of how strenuous an exercise can be. The higher this value, the more strenuous the exercise. For example, if the CCM for one activity is 20 cal/min - this means that for every minute of the exercise, the person will have to burn 20 calories. Hence, if the person does the exercise for 15 mins, he/she will burn a total of 20 * 15 = 300 calories
+    In a game of football, the CCM value for an athlete varies throughout the 90 mins,based on the intensity of the game. 
+    - For the first 15 mins,the game is high intensity - the CCM value is 30 cal/min
+    - The next 30 mins (till the half time of 45mins) - the CCM value drops to 20 cal/min
+    - After the restart, for the next 30 mins - the CCM again drops to 15 cal/min
+    - The last 15 mins of the game is high intensity with a CCM value of 35 cal/min 
+
+    WAP to input the amount of time in minutes that the athlete has played in the match (this value should be less than 90, print an error message if not so). Then calculate how much total calories have been expended by that athlete during the match
+  
+  code: |
+    
+    import java.util.*;
+    public class Slab_3
+    {
+        public static void main()
+        {
+            double time, calories = 0;
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the time in mins played by the athlete");
+            time = sc.nextDouble();
+        
+            // check the time played for
+            if (time <= 15)
+            {
+                calories = time * 30;
+            }
+            else if ((time > 15) && (time <= 45))
+            {
+                calories = (15 * 30) + ((time - 15) * 20);
+            }
+            else if ((time > 45) && (time <= 75))
+            {
+                calories = (15 * 30) + (30 * 20) + ((time - 45) * 15);
+            }
+            else if ((time > 75) && (time <= 90))
+            {
+                calories = (15*30) + (30*20) + (30*15) + ((time - 75)*35);
+            }
+
+            System.out.println("Total Calories consumed = " + calories);
+        }
+    }
+
+  python: |
+
+    time = int(input('enter the time in mins played  : '))
+    if time <= 15:
+        calories = time * 30
+    elif (time > 15) and time <= 45:
+        calories = (15 * 30) + ((time - 15) * 20)
+    elif (time > 45) and (time <= 75):
+        calories = (15 * 30) + (30 * 20) + ((time - 45) * 15)
+    elif (time > 75) and (time <= 90):
+        calories = (15*30) + (30*20) + (30*15) + ((time - 75)*35)
+
+    print('calories consumed =', calories)
+
+
+- title: |
+    An imaginary particle named **himutron** starts from rest. 
+    - During it’s first 10 seconds of motion it travels at a velocity of 10m/s.
+    - The next 20 seconds it travels at a velocity of 15m/s.
+    - The next 30 seconds it travels at a velocity of 20m/s.
+    - After that it continues to travel at a constant velocity of 25m/s.
+
+    WAP which takes the time in seconds and prints out how far the particle is from the starting point at that point in time in meters
+
+  code: |
+    
+    import java.util.*;
+    public class Project5
+    {
+        public static void main (){
+        Scanner sc = new Scanner (System.in);
+        int t,d=0;
+        System.out.println("Enter the time ");
+        t=sc.nextInt();
+        if(t<=10 ){
+            d=t*10;
+        }
+        else if (t>10 && t <=30){
+            d=(10*10)+((t-10)*15);
+        }
+        else if (t>30 && t<=60){
+            d=(10*10)+(20*15)+((t-30)*20);
+        }
+        else if (t>60){
+            d= (10*10)+(20*15)+(30*20)+((t-60)*25);
+        }
+        System.out.println("Distance from the starting point = "+d);
+        }
+    }
+
+  python: |
+
+    t = int(input('enter the time in seconds  : '))
+
+    if t <= 10:
+        d = t*10
+    elif t > 10 and t <= 30 :
+        d = (10*10) + ((t-10)*15)
+    elif t > 30 and t <= 60:
+        d = (10*10) + (20*15) + ((t-30)*20)
+    elif t > 60:
+        d = (10*10) + (20*15) + (30*20) + ((t-60)*25)
+
+    print('distance covered =', d)
