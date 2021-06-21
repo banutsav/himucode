@@ -7,8 +7,6 @@ title: Nested Loop Programs
 <code>Question {{ forloop.index }}</code>
 {{ item.title | markdownify }}
 
-<div class="container content">
-
 <!--- java section --->
 <details>
     <summary><code>java</code></summary>
@@ -37,7 +35,6 @@ title: Nested Loop Programs
     </p>
 </details>
 
-</div>
 <hr>
 
 {% endfor %}

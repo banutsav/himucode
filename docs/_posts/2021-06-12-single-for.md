@@ -8,7 +8,6 @@ title: Single For Loop Programs
 <code>Question {{ forloop.index }}</code>
 {{ item.title | markdownify }}
 
-<div class="container content">
 
 <!--- java section --->
 <details>
@@ -38,7 +37,6 @@ title: Single For Loop Programs
     </p>
 </details>
 
-</div>
 <hr>
 
 {% endfor %}

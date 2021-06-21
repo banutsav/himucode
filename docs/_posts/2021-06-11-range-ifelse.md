@@ -8,8 +8,6 @@ title: Range Based If-Else Programs
 <code>Question {{ forloop.index }}</code>
 {{ item.title | markdownify }}
 
-<div class="container content">
-
 <!--- java section --->
 <details>
     <summary><code>java</code></summary>
@@ -38,7 +36,6 @@ title: Range Based If-Else Programs
     </p>
 </details>
 
-</div>
 <hr>
 
 {% endfor %}

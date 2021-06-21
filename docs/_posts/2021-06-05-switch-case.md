@@ -8,7 +8,7 @@ title: Switch Case / Menu Driven Programs
 <code>Question {{ forloop.index }}</code>
 {{ item.title | markdownify }}
 
-<div class="container content">
+<!--<div class="container content">-->
 
 <!--- java section --->
 <details>
@@ -38,7 +38,8 @@ title: Switch Case / Menu Driven Programs
     </p>
 </details>
 
-</div>
+<!--</div>-->
+
 <hr>
 
 

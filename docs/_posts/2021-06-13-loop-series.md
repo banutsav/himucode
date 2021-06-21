@@ -7,7 +7,6 @@ title: Loop Programs based on Mathematical Series
 <code>Question {{ forloop.index }}</code>
 {{ item.title | markdownify }}
 
-<div class="container content">
 
 <!--- java section --->
 <details>
@@ -37,7 +36,6 @@ title: Loop Programs based on Mathematical Series
     </p>
 </details>
 
-</div>
 <hr>
 
 {% endfor %}
