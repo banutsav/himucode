@@ -69,6 +69,10 @@ programs:
         }
     }
 
+  python: |
+
+   # Python does not have a switch or case statement
+
 - title: |
     Write a menu driven program to accept two numbers and perform any of the fundamental operations 
     add, subtract, multiply or division as per user’s choice. 
@@ -138,6 +142,11 @@ programs:
 
         }
     }
+
+  python: |
+
+   # Python does not have a switch or case statement
+
 - title: |
     Based on the item type calculate the total amount including GST, refer to the table below
 
@@ -209,6 +218,10 @@ programs:
         }
     }
 
+  python: |
+
+   # Python does not have a switch or case statement
+
 - title: |
     WAP to input the number of sides of a geometric figure and then display the type of the geometric figure.
     The set of figures are given as follows
@@ -256,6 +269,10 @@ programs:
         }
     }
 
+  python: |
+
+   # Python does not have a switch or case statement
+
 - title: |
     Write a Menu Driven program to accept 2 numbers, num1 and num2.
     Display the quotient or remainder on dividing num1 by num2 as per the users choice on the following options
@@ -302,3 +319,7 @@ programs:
         }
         }
     }
+
+  python: |
+
+   # Python does not have a switch or case statement

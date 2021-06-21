@@ -25,6 +25,14 @@ programs:
         }
     }
 
+  python: |
+
+    n = int(input("Enter a number: "))
+    s = 0
+    for i in range(1,n + 1,1):
+        s += i
+    print('sum = ', s)
+
 
 - title: |
     WAP to take a number (n) as input and then print all natural numbers in reverse from n to 1.
@@ -49,6 +57,11 @@ programs:
         }
     }
 
+  python: |
+
+    n = int(input("Enter a number: "))
+    for i in range(n, 0, -1):
+        print(i)
 
 - title: |
     A **Perfect number** is a positive integer that is equal to the sum of its proper divisors.
@@ -56,7 +69,45 @@ programs:
     Other perfect numbers are 28, 496, and 8128
     WAP a program to input a number and check whether it is a perfect number or not
 
-  code: ''
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int n, s = 0, i;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        n = sc.nextInt();
+        
+        // find proper divisors
+        for (i = 1; i < n; i++)
+        {
+            if (n % i == 0)
+                s += i;
+        }
+        
+        if (s == n)
+            System.out.println("Perfect Number");
+        else
+            System.out.println("Not a Perfect Number");
+        }
+    }
+
+
+  python: |
+
+    n = int(input("Enter a number: "))
+    s = 0
+    for i in range(1, n, 1):
+        if n % i == 0:
+            s += i
+    if n == s:
+        print('perfect number')
+    else:
+        print('not a perfect number')
+
 
 - title: |
     WAP to input a number n from the user.
@@ -87,6 +138,14 @@ programs:
         }
     }
 
+  python: |
+
+    n = int(input("Enter the number of inputs: "))
+    s = 0
+    for i in range(n):
+        x = int(input("Enter number: "))
+        s += x
+    print('sum =', s)
 
 - title: |
     WAP to find the factorial value of any number taken in as input.
@@ -114,24 +173,82 @@ programs:
         }
     }
 
+  python: |
+
+    n = int(input("Enter a number: "))
+    f = 1
+    for i in range(1, n + 1, 1):
+        f *= i
+    print('factorial =', f)
+
 - title: |
     WAP to find the number and sum of all integer between 100 and 200 which are divisible by 9
 
-  code: ''
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int s = 0, i;
+        
+        // loop from 100 to 200
+        for (i = 100; i <= 200; i++)
+        {
+            if (i % 9 == 0)
+                s += i;
+        }
+        
+        System.out.println("Sum = " + s);
+        }
+    }
+
+  python: |
+
+    s = 0
+    for i in range(100, 201, 1):
+        if i % 9 == 0:
+            s += i
+    print('sum =', s) 
 
 - title: |
     WAP to display **n terms** of square natural number and their sum, where n is an input
     For example if n = 4 then the program should print out the series
     1,4,9,16 and the sum 1+4+9+16 = 30
 
-  code: ''
+  code: |
 
-- title: |
-    WAP to input a number n from the user. 
-    Then take n numbers as input from the user using a for loop and
-    find the maximum number and the minimum number.
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int n, x, s = 0, i;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        n = sc.nextInt();
+        
+        // loop from 100 to 200
+        for (i = 1; i <= n; i++)
+        {
+            x = i * i;
+            System.out.println(x);
+            s += x;
+        }
+        
+        System.out.println("Sum = " + s);
+        }
+    }
 
-  code: ''
+  python: |
+
+    n = int(input("enter a number: "))
+    s = 0
+    for i in range(1, n + 1, 1):
+        x = i * i
+        s += x
+    print('sum =', s)
 
 - title: |
     Take two numbers as input from the user then
@@ -163,6 +280,16 @@ programs:
         System.out.println(a + " to the power " + b + " = " + p);
         }
     }
+
+  python: |
+
+    a = int(input("enter the first number: "))
+    b = int(input("enter the second number: "))
+    x = 1
+
+    for i in range(b):
+        x *= a
+    print('power =', x)
 
 
 - title: |
@@ -198,6 +325,19 @@ programs:
         }
         }
     }
+
+  python: |
+
+    n = int(input("enter a number: "))
+    c = 0
+    for i in range(1, n + 1, 1):
+        if n % i == 0:
+            print(i, 'is a factor')
+            c += 1
+    if c == 2:
+        print('prime number')
+    else:
+        print('not a prime number')
 
 
 - title: |
@@ -244,3 +384,23 @@ programs:
         System.out.println("total zeros = " + zeros);
         }
     }
+
+  python: |
+
+    n = int(input("Enter the number of inputs: "))
+    pos = 0
+    neg = 0
+    zero = 0
+
+    for i in range(n):
+        x = int(input("Enter number: "))
+        if x > 0:
+            pos += 1
+        elif x < 0:
+            neg += 1
+        else:
+            zero += 1
+
+    print('positive numbers =', pos)
+    print('negative numbers =', neg)
+    print('zeroes =', zero)

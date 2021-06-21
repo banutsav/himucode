@@ -72,7 +72,30 @@ programs:
     - **ex:** if input is 3459 (9 is the last digit and it is odd)
     - **ex:** if input 264 (4 is the last digit and it is even)
 
-  code: ''
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int n,digit;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter an integer");
+        n = sc.nextInt();
+        
+        // get last digit
+        digit = n % 10;
+        
+        // check if odd or even
+        if (digit % 2 == 0)
+            System.out.println("Last digit is even");
+        else
+            System.out.println("Last digit is odd");
+        
+        }
+    }
+
 
   python: |
 
@@ -88,7 +111,28 @@ programs:
     WAP in java to input the temperature in fahrenheit. 
     Then convert the temperature into celsius and check if the temperature is above the boiling point of water or not
 
-  code: ''
+  code: |
+
+    public class Test
+    {
+        public static void main()
+        {
+        int f, c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the temperature in farenheit");
+        f = sc.nextInt();
+        
+        // convert to celsius
+        c = ((f - 32) * 5)/9;
+        System.out.println("temperature in celsius =" + c);
+        if (c >= 100)
+            System.out.println("above the boiling point of water");
+        else
+            System.out.println("below the boilng point of water");
+        
+        }
+    }
+
 
   python: |
     
@@ -106,7 +150,30 @@ programs:
     - Print out the sum of the 2 numbers if both of them are odd
     - Print out the product of the 2 numbers if both of them are even
 
-  code: ''
+  code: |
+    
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int a, b;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter the first number");
+        a = sc.nextInt();
+        
+        System.out.println("Enter the second number");
+        b = sc.nextInt();
+        
+        if ((a % 2 == 0) && (b % 2 == 0))
+            System.out.println(a*b);
+        else if ((a % 2 != 0) && (b % 2 != 0))
+            System.out.println(a + b);
+        else
+            System.out.println("one is odd and the other is even");
+        }
+    }
 
   python: |
 
@@ -353,6 +420,7 @@ programs:
 
 - title: |
     WAP to check whether a number is divisible by 5 AND 11 or not
+  
   code: |
     
     import java.util.*;

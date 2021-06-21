@@ -91,8 +91,11 @@ programs:
         print('incorrect input')
 
 - title: |
-    WAP to take the age of a person and the principal amount taken as loan by the person.
-    Depending on the age, calculate the simple interest that has to be payable by the person based on the conditions below
+    WAP to take the age of a person, the principal amount taken as loan by the person 
+    and the time for which the loan is taken.
+    Depending on the time for which the loan is taken
+    , calculate the simple interest that has to be payable by the person 
+    based on the conditions below
 
     *If Age is below 60*
 
@@ -110,7 +113,80 @@ programs:
     | 6 to 10 | 8.5 |
     | > 10 | 10 |
 
-  code: ''
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        double age, amount, time, rate, interest;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter the age of the person");
+        age = sc.nextDouble();
+        
+        System.out.println("Enter the principal amount");
+        amount = sc.nextDouble();
+        
+        System.out.println("Enter the time period of the loan");
+        time = sc.nextDouble();
+        
+        // if age below 60
+        if (age < 60)
+        {
+            if (time <= 5)
+                rate = 4.5;
+            else if ((time >= 6) && (time <= 10))
+                rate = 6;
+            else
+                rate = 8.5;
+        }
+        // if age below 60
+        else
+        {
+            if (time <= 5)
+                rate = 6;
+            else if ((time >= 6) && (time <= 10))
+                rate = 8.5;
+            else
+                rate = 10;
+        }
+        
+        // calculate the interest
+        interest = ((amount*rate*time)/100);
+        System.out.println("Interest = " + interest);
+        }
+    }
+
+  python: |
+
+    age = int(input("Enter the age of the person: "))
+    amount = int(input("Enter the principal amount: "))
+    time = int(input("Enter the time period of the loan: "))
+        
+    # if age below 60
+    if age < 60:
+        if time <= 5:
+            rate = 4.5
+        elif (time >= 6) and (time <= 10):
+            rate = 6
+        else:
+            rate = 8.5
+
+    # if age below 60
+
+    else:
+        if time <= 5:
+            rate = 6
+        elif (time >= 6) and (time <= 10):
+            rate = 8.5
+        else:
+            rate = 10
+        
+    interest = (amount*rate*time)/100
+    print("Interest = ", interest)
+
 
 - title: |
     WAP to input basic salary of an employee and calculate its Gross salary according to following:
