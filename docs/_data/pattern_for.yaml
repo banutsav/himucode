@@ -10,7 +10,37 @@ programs:
     11111<br>
     111111<br>
     In this example **n = 6**
-  code:
+  
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+    public static void main()
+    {
+        int i, j, n;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter the number of lines");
+        n = sc.nextInt();
+        
+        for (i = 1; i<= n; i++)
+        {
+            for (j = 1; j <= i; j++)
+                System.out.print("1");
+            System.out.println();
+        }
+    }
+    }
+
+  python: |
+
+    n = int(input("Enter the number of lines: "))
+
+    for i in range(1, n + 1, 1):
+        for j in range(1, i + 1, 1):
+            print('1', end = ' ')
+    print()
 
 - title: |
     WAP to input a number **n** and print the following pattern uptil n lines
@@ -21,8 +51,37 @@ programs:
     12345<br>
     123456<br>
     In this example **n = 6**
-  code:
+  
+  code: |
 
+    import java.util.*;
+    public class Test
+    {
+    public static void main()
+    {
+        int i, j, n;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter the first number");
+        n = sc.nextInt();
+        
+        for (i = 1; i<= n; i++)
+        {
+            for (j = 1; j <= i; j++)
+                System.out.print(j);
+            System.out.println();
+        }
+    }
+    }
+
+  python: |
+
+    n = int(input("Enter the number of lines: "))
+
+    for i in range(1, n + 1, 1):
+        for j in range(1, i + 1, 1):
+            print(j, end = ' ')
+        print()
 
 - title: |
     WAP to input a number **n** and print the following pattern uptil n lines
@@ -32,7 +91,37 @@ programs:
     4444<br>
     55555<br>
     In this example **n = 5**
-  code:
+  
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+    public static void main()
+    {
+        int i, j, n;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter the first number");
+        n = sc.nextInt();
+        
+        for (i = 1; i<= n; i++)
+        {
+            for (j = 1; j <= i; j++)
+                System.out.print(i);
+            System.out.println();
+        }
+    }
+    }
+
+  python: |
+
+    n = int(input("Enter the number of lines: "))
+
+    for i in range(1, n + 1, 1):
+        for j in range(1, i + 1, 1):
+            print(i, end = ' ')
+        print()
 
 - title: |
     WAP to input a number **n** and print the following pattern uptil n lines
@@ -42,4 +131,38 @@ programs:
     1010<br>
     10101<br>
     In this example **n = 5**
-  code:
+  
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+    public static void main()
+    {
+        int i, j, n, x;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter the first number");
+        n = sc.nextInt();
+        
+        for (i = 1; i<= n; i++)
+        {
+            for (j = 1; j <= i; j++)
+            {
+                x = j % 2;
+                System.out.print(x);
+            }
+            System.out.println();
+        }
+    }
+    }
+
+  python: |
+
+    n = int(input("Enter the number of lines: "))
+
+    for i in range(1, n + 1, 1):
+        for j in range(1, i + 1, 1):
+            x = j % 2 
+            print(x, end = ' ')
+        print()
