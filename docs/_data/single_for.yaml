@@ -229,7 +229,7 @@ programs:
         System.out.println("Enter a number");
         n = sc.nextInt();
         
-        // loop from 100 to 200
+        // loop from 1 to n
         for (i = 1; i <= n; i++)
         {
             x = i * i;
@@ -395,6 +395,45 @@ programs:
     else:
         print('not a prime number')
 
+
+- title: |
+    WAP to input a number **n** and also input another number **x**. 
+    Then print out the first **x** multiples of **n**. 
+    For example: if **n = 5 and x = 8**, then the program should print out the first 8 multiples of 5
+    which are **5,10,15,20,...,40**
+
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+    public static void main()
+    {
+        int i, m, n, x;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("enter a number");
+        n = sc.nextInt();
+        
+        System.out.println("enter the number of multiples");
+        x = sc.nextInt();
+        
+        for (i = 1; i<= x; i++)
+        {
+            m = i * n;
+            System.out.println(m);
+        }
+    }
+    }
+
+  python: |
+
+    n = int(input("Enter a number: "))
+    x = int(input("Enter the number of multiples: "))
+
+    for i in range(1, x + 1, 1):
+        m = n * i
+        print(m)
 
 - title: |
     WAP to input a number n from the user. 
