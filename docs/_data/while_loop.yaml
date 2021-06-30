@@ -5,7 +5,28 @@ programs:
     WAP to take a number (n) as input and then find the sum of all it's digits. 
     For example if the input **n = 2673**, then the output should be **18 i.e. 2 + 6 + 7 + 3** 
   
-  code: ''
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+      public static void main()
+      {
+        int s = 0, n, d;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        n = sc.nextInt();
+        
+        // extract digits
+        while (n != 0)
+        {
+            d = n % 10;
+            n = n / 10;
+            s += d;
+        }
+        System.out.println("Sum of the digits = " + s);
+      } 
+    }
 
   python: |
     
@@ -24,4 +45,55 @@ programs:
     For example: **153 = 1x1x1 + 5x5x5 + 3x3x3**
     <br>WAP to input a 3 digit number and check if it is an Armstrong Number
 
-  code: ''
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+      public static void main()
+      {
+        int s = 0, n, d, a;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        n = sc.nextInt();
+        
+        // preserve the original number
+        a = n;
+        
+        // extract digits
+        while (n != 0)
+        {
+            d = n % 10;
+            n = n / 10;
+            s += (d*d*d);
+        }
+        System.out.println("Sum of the cube of the digits = " + s);
+        
+        // check if armstrong
+        if (a == s)
+            System.out.println("Armstrong number");
+        else
+            System.out.println("Not an Armstrong number");
+      }
+    }
+
+  python: |
+
+    n = int(input("enter the number : "))
+
+    # preserve the original number
+    a = n
+
+    s = 0
+    # digit extraction
+    while n != 0:
+      d = n % 10
+      n = int(n / 10)
+      s += (d**3)
+
+    print("sum of cube of digits =", s)
+
+    if s == a:
+      print("armstrong number")
+    else:
+      print("not an armstrong number")

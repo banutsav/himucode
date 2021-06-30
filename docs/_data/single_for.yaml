@@ -499,3 +499,6 @@ programs:
     print('positive numbers =', pos)
     print('negative numbers =', neg)
     print('zeroes =', zero)
+
+- title: |
+    WAP to display 10 different numbers from the user and display the greatest and the least number from the set.

@@ -14,7 +14,7 @@ title:  Pattern Generation Programs
     <summary><code>java</code></summary>
     <p>
         {% highlight java %}
-        {% if item.code == '' %}
+        {% if item.code == null %}
             //{{ site.pending }}
         {% else %}
             {{ item.code }}

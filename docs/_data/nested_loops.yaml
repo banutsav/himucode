@@ -8,19 +8,245 @@ programs:
     Then your program should print out the **first 5 prime numbers starting from 72**
     So the output should be **73, 79, 83, 89, 97**
 
-  code: ''
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int i, start, count, total = 0, n;
+        boolean flag;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the starting number");
+        start = sc.nextInt();
+        System.out.println("Enter the number of prime numbers");
+        count = sc.nextInt();
+        
+        // start from the starting number
+        n = start;
+        while(total < count)
+        {
+            flag = true;
+            
+            // check if n is prime
+            for (i = 2; i < n; i++)
+            {
+               if (n%i == 0)
+               {
+                    flag = false;
+                    break;
+                }
+            }
+            
+            // is prime
+            if (flag)
+            {
+                System.out.println(n);
+                total++;
+            }
+            
+            // go to the next number
+            n++;
+        }
+        }
+    }
+
+  python: |
+
+    start = int(input("Enter the starting number: "))
+    count = int(input("Enter the number of primes: "))
+
+    total = 0
+
+    # start from the starting number
+    n = start
+    while total < count:
+        flag = True
+            
+        # check if n is prime
+        for i in range(2, n, 1):
+            if n%i == 0:
+                flag = False
+                break
+            
+        # is prime
+        if flag:
+            print(n)
+            total+=1
+        # go to the next number
+        n+=1
 
 - title: |
     WAP to input a number and print the sum of the factorial of it's digits
     For example, if the number **n = 243**, 
     then the program should print out **2! + 4! + 3! = 2 + 24 + 6 = 32**
 
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int i, n, digit, f, s = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        n = sc.nextInt();
+        
+        // extract digits
+        while(n != 0)
+        {
+            digit = n%10;
+            n = n/10;
+            
+            // calculate factorial
+            f = 1;
+            for (i = 1; i <= digit; i++)
+                f*=i;
+            
+            // add to sum
+            s+=f;
+        }
+        System.out.println("Sum of factorial of digits = " + s);
+        }
+    }
+
+  python: |
+
+    n = int(input("Enter the number: "))
+    s = 0
+
+    # extract digits
+    while n != 0:
+        digit = n % 10
+        n = int(n/10)
+
+        # calclate factorial
+        f = 1
+        for i in range(1, digit+1, 1):
+            f *= i
+
+        # add to sum
+        s += f
+
+    print("sum=", s)
+
+
 - title: |
     WAP to calculate the largest 2 digit prime number
 
-  code: ''
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int i, n, j;
+        boolean flag;
+        
+        // reverse loop from 99
+        for (i = 99; i >= 10; i--)
+        {
+            // check if number is prime
+            n = i;
+            flag = true;
+            for (j = 2; j < n; j++)
+            {
+                // factor found
+                if (n % j == 0)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            
+            // is prime
+            if (flag)
+            {
+                System.out.println(n);
+                break;
+            }
+        }
+        }
+    }
+
+  python: |
+
+    # reverse loop from  99
+    for i in range(99, 10, -1):
+        n = i
+
+        # check if number is prime
+        flag = True 
+        for i in range(2, n, 1):
+
+            # factor found
+            if n % i == 0:
+                flag = False
+                break
+
+        # is prime
+        if flag:
+            print(n)
+            break
 
 - title: |
     WAP to calculate the largest 3 digit prime number
 
-  code: ''
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int i, n, j;
+        boolean flag;
+        
+        // reverse loop from 999
+        for (i = 999; i >= 100; i--)
+        {
+            // check if number is prime
+            n = i;
+            flag = true;
+            for (j = 2; j < n; j++)
+            {
+                // factor found
+                if (n % j == 0)
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            
+            // is prime
+            if (flag)
+            {
+                System.out.println(n);
+                break;
+            }
+        }
+        }
+    }
+
+  python: |
+
+    # reverse loop from  99
+    for i in range(999, 100, -1):
+        n = i
+
+        # check if number is prime
+        flag = True 
+        for i in range(2, n, 1):
+
+            # factor found
+            if n % i == 0:
+                flag = False
+                break
+
+        # is prime
+        if flag:
+            print(n)
+            break

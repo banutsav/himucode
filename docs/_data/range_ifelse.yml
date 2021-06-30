@@ -91,6 +91,17 @@ programs:
         print('incorrect input')
 
 - title: |
+
+    A bank accepts fixed deposits for one year or more and the policy it adopts on interest is as follows.
+     - If a deposit is less than Rs.2000 and for 2 or more years, the interest rate is 5% compounded annualy.
+     - If a deposit is Rs.2000 or more but less than Rs.6000 and for 2 or more years, the interest rate is 7% compounded annualy. 
+     - If a deposit is more than Rs.6000 and is for 1 year or more, the interest rate is 8% compounded annualy.
+     - On all deposits of 5 years or more, interest is 10% compounded annualy.
+     - On all other deposits not covered by the above conditions, the interest is 3% compounded annualy.
+
+     Given the amount deposited and the number of years, WAP to calculate the money in the customer's account at the end of the specified time
+     
+- title: |
     WAP to take the age of a person, the principal amount taken as loan by the person 
     and the time for which the loan is taken.
     Depending on the time for which the loan is taken
