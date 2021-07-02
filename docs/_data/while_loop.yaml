@@ -38,6 +38,57 @@ programs:
       s += d
     print('sum of digits =', s)
 
+- title: |
+    Use a while loop to keep entering numbers except 0 - **the loop will stop once the user enters a 0**. 
+    Within the loop, keep summing up all the positive even numbers and the negative odd numbers. 
+    Once the loop stops, print out both the sums
+
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+      public static void main()
+      {
+        int pe = 0, no = 0, n = 1;
+        Scanner sc = new Scanner(System.in);
+        while (n != 0)
+        {
+            System.out.println("Enter number (0 to exit)");
+            n = sc.nextInt();
+            
+            // positive even
+            if ((n > 0) && (n % 2 == 0))
+                pe += n;
+            // negative odd
+            else if ((n < 0) && (n % 2 != 0))
+                no += n;
+        }
+        System.out.println("Sum of +ve even: " + pe);
+        System.out.println("Sum of -ve odd: " + no);
+      }
+    } 
+
+  python: |
+
+    n = 1
+    pe = 0
+    no = 0
+
+    while n != 0:
+
+      n = int(input("Enter a number (0 to exit) : "))
+
+      # positive even
+      if n > 0 and n % 2 == 0:
+        pe += n
+      # negative odd
+      elif n < 0 and n % 2 != 0:
+        no += n
+
+    print("sum of +ve even numbers : ", pe)
+    print("sum of -ve odd numbers : ", no)
+
 
 - title: |
     An **Armstrong number** of 3 digits is a 3-digit number
