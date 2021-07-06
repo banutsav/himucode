@@ -36,6 +36,123 @@ programs:
         print(x)
 
 - title: 
+    WAP to print out the following series 
+    1, 2, 4, 7, 11, 16, 22, 29 .. uptil **n terms**
+    where **n** is taken as an input by the program
+
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int a = 1, n, i;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of terms");
+        n = sc.nextInt();
+        
+        for (i = 1; i <= n; i++)
+        {
+            System.out.println(a);
+            a += i;
+        }
+        }
+    }
+
+  python: |
+
+    n = int(input('Enter the number of terms: '))
+    a = 1
+
+    for i in range(1, n+1, 1):
+        print(a)
+        a += i
+
+
+- title: |
+
+    WAP to take 2 inputs from the user - **x** and **n**. Then print out the following series 
+    x, x<sup>2</sup>, x<sup>3</sup>, x<sup>4</sup>, x<sup>5</sup> + .... uptil **n** terms
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class Test
+    {
+        public static void main()
+        {
+        double x, n, i, a;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of n");
+        n = sc.nextFloat();
+        
+        System.out.println("Enter the value of x");
+        x = sc.nextFloat();
+        
+        for (i = 1; i <= n; i++)
+        {
+            a = Math.pow(x, i);
+            System.out.println(a);
+        }
+        }
+    }
+
+  python: |
+
+    n = int(input('Enter the value of n: '))
+    x = int(input('Enter the value of x: '))
+
+    for i in range(1, n+1, 1):
+        a = x**i
+        print(a)
+
+
+- title:
+    WAP to print out and find the sum of the following series uptil **n** terms 
+    where **n** comes in as an input from the user 
+    1! + 2! + 3! + 4! + 5! + .... uptil **n** terms
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class Test
+    {
+        public static void main()
+        {
+        double n, i, a = 1, s = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of n");
+        n = sc.nextFloat();
+        
+        for (i = 1; i <= n; i++)
+        {
+            a *= i;
+            System.out.println(a);
+            s += a;
+        }
+        
+        System.out.println("Sum of the series = " + s);
+        }
+    }
+
+  python: |
+
+    n = int(input('Enter the value of n: '))
+    a = 1
+    s = 0
+
+    for i in range(1, n+1, 1):
+        a *= i
+        print(a)
+        s += a
+
+    print('Sum of the series =', s)
+
+
+- title: 
     WAP to print out and also find the sum of the following series 
     1 +11 + 111 + 1111 + .. uptil **n terms**
     where **n** is taken as an input by the program
@@ -318,3 +435,44 @@ programs:
         print(x)
         s += x
     print('sum = ', s) 
+
+- title: |
+    Take an input n from the user and print out the **Fibonacci Series** till n terms. This loop_series_title
+    is defined as follows - 1, 1, 2, 3, 5, 8, 13, 21, 34, 55,...(Sum of 2 terms gives the next term)
+
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int a = 1, b = 1, c, n, i;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of terms");
+        n = sc.nextInt();
+        
+        for (i = 1; i <= n; i++)
+        {
+            System.out.println(a);
+            c = b;
+            b = b + a;
+            a = c; 
+        }
+        }
+    }
+
+  python: |
+
+    n = int(input('Enter the number of terms: '))
+
+    a = 1
+    b = 1
+
+    for i in range(n):
+        print(a)
+        c = b
+        b = b + a
+        a = c
+
+ 
