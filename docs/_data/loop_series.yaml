@@ -152,6 +152,146 @@ programs:
     print('Sum of the series =', s)
 
 
+- title: |
+    WAP to print out the following series uptil **n** terms where **n** comes in as an input from the user 
+    1, 2, 9, 64, 625, ... uptil **n terms**
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class Test
+    {
+        public static void main()
+        {
+        double n, i, a;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of n");
+        n = sc.nextFloat();
+        
+        for (i = 1; i <= n; i++)
+        {
+            a = Math.pow(i, i-1);
+            System.out.println(a);
+        }
+        }
+    }
+
+  python: |
+
+    n = int(input('Enter the value of n: '))
+
+    for i in range(1, n+1, 1):
+        a = i ** (i - 1)
+        print(a)
+
+- title: |
+    WAP to print out the following series uptil **n** terms where **n** comes in as an input from the user 
+    0, 7, 26, 63 ... uptil **n terms**
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class Test
+    {
+        public static void main()
+        {
+        double n, i, a;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of n");
+        n = sc.nextFloat();
+        
+        for (i = 1; i <= n; i++)
+        {
+            a = Math.pow(i, 3) - 1;
+            System.out.println(a);
+        }
+        }
+    }
+
+  python: |
+
+    n = int(input('Enter the value of n: '))
+
+    for i in range(1, n+1, 1):
+        a = (i ** 3) - 1
+        print(a)
+
+
+- title: |
+    WAP to display **n terms** of square natural number and their sum, where n is an input
+    For example if n = 4 then the program should print out the series
+    1,4,9,16 and the sum 1+4+9+16 = 30
+
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        int n, x, s = 0, i;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        n = sc.nextInt();
+        
+        // loop from 1 to n
+        for (i = 1; i <= n; i++)
+        {
+            x = i * i;
+            System.out.println(x);
+            s += x;
+        }
+        
+        System.out.println("Sum = " + s);
+        }
+    }
+
+  python: |
+
+    n = int(input("enter a number: "))
+    s = 0
+    for i in range(1, n + 1, 1):
+        x = i * i
+        s += x
+    print('sum =', s)
+
+- title: |
+    WAP to print out the following series 
+    1 + (1/2!) + (1/3!) + (1/4!) + ... uptil **n terms**
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class Test
+    {
+        public static void main()
+        {
+        double n, i, a = 1, x;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of n");
+        n = sc.nextFloat();
+        
+        for (i = 1; i <= n; i++)
+        {
+            a *= i;
+            x = (1/a);
+            System.out.println(x);
+        }
+        }
+    }
+
+  python: |
+
+    n = int(input('Enter the value of n: '))
+    a = 1
+    for i in range(1, n+1, 1):
+        a *= i
+        x = (1/a)
+        print(x)
+
 - title: 
     WAP to print out and also find the sum of the following series 
     1 +11 + 111 + 1111 + .. uptil **n terms**
@@ -190,6 +330,56 @@ programs:
         print(x)
         s += x
     print('sum = ', s)
+
+- title: |
+    WAP to input 2 numbers **a** and **n** - then print out and also find the sum of the following series 
+    a-a<sup>3</sup>+a<sup>5</sup>-a<sup>7</sup>+a<sup>9</sup> ... **uptil n terms** 
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class Test
+    {
+        public static void main()
+        {
+        double n, i, x, p = 1, a, s = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of n");
+        n = sc.nextFloat();
+        
+        System.out.println("Enter the value of a");
+        a = sc.nextFloat();
+        
+        for (i = 1; i <= n; i++)
+        {
+            x = Math.pow(a, p);
+            System.out.println(x);
+            p += 2;
+            a *= -1;
+            s += x;
+        }
+        System.out.println("Sum = " + s);
+        }
+    }
+
+  python: |
+
+    n = int(input('Enter the value of n: '))
+    a = int(input('Enter the value of a: '))
+
+    p = 1
+    s = 0
+
+    for i in range(1, n+1, 1):
+        x = a**p
+        print(x)
+        p += 2
+        a *= -1
+        s += x
+
+    print("sum of the series:", s)
+
 
 - title: |
     WAP to print out and calculate the sum of the following series
@@ -276,6 +466,59 @@ programs:
         print(x)
         s += x
     print('sum = ', s)
+
+- title: |
+    WAP to input 2 numbers **x** and **n** - and find the sum of the following series <br>
+    1+(x<sup>2</sup>/1)-(x<sup>3</sup>/2)+(x<sup>4</sup>/3)-(x<sup>5</sup>/4) ... **uptil n terms**
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class Test
+    {
+        public static void main()
+        {
+        double n, i, x, a, s = 1;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of n");
+        n = sc.nextFloat();
+        
+        System.out.println("Enter the value of x");
+        x = sc.nextFloat();
+        
+        for (i = 1; i <= n; i++)
+        {
+            a = (( Math.pow(x, i + 1) )/ i);
+            
+            // alternate terms are -ve
+            if (i % 2 == 0)
+                a *= -1;
+            
+            s += x;
+        }
+        
+        System.out.println("Sum of the series: " + s);
+        }
+    }
+
+  python: |
+
+    n = int(input('Enter the value of n: '))
+    x = int(input('Enter the value of x: '))
+
+    s = 1
+
+    for i in range(1, n+1, 1):
+        a = (x ** (i + 1))/i
+
+        # alternating terms are even
+        if i % 2 == 0:
+            a *= -1
+
+        s += x
+
+    print("sum of the series:", s)
 
 - title: |
     WAP to input a number **n** and print the **first n terms** of the following series

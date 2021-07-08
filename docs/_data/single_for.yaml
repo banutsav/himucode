@@ -213,44 +213,6 @@ programs:
     print('sum =', s) 
 
 - title: |
-    WAP to display **n terms** of square natural number and their sum, where n is an input
-    For example if n = 4 then the program should print out the series
-    1,4,9,16 and the sum 1+4+9+16 = 30
-
-  code: |
-
-    import java.util.*;
-    public class Test
-    {
-        public static void main()
-        {
-        int n, x, s = 0, i;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number");
-        n = sc.nextInt();
-        
-        // loop from 1 to n
-        for (i = 1; i <= n; i++)
-        {
-            x = i * i;
-            System.out.println(x);
-            s += x;
-        }
-        
-        System.out.println("Sum = " + s);
-        }
-    }
-
-  python: |
-
-    n = int(input("enter a number: "))
-    s = 0
-    for i in range(1, n + 1, 1):
-        x = i * i
-        s += x
-    print('sum =', s)
-
-- title: |
     Take two numbers as input from the user then
     WAP to find the value of one number raised to the power of another. (Do not use Java built-in method)
 
