@@ -2,6 +2,84 @@ nested_loops_title: Nested Loop Programs
 programs:
 
 - title: |
+    A positive integer of **n digits** is called an **Armstrong number** of **order n** 
+    (order is the number of digits) if `abcd... = pow(a,n) + pow(b,n) + pow(c,n) + pow(d,n) + .... `
+     where the digits of the number are **abcd...**<br>
+     For Example: 1634 is an Armstrong Number of 4 digits because 
+     1634 = 1<sup>4</sup> + 6<sup>4</sup> + 3<sup>4</sup> + 4<sup>4</sup> <br>
+     WAP to input a number and check whether it is an Armstrong Number or not
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class Armstrong 
+    {
+        public static void main()
+        {
+        int num, d = 0, sum = 0, counter = 0,temp;
+
+        Scanner sc =  new Scanner(System.in);
+        System.out.println("Enter the number to be verified: ");
+        num = sc.nextInt();
+        temp = num;
+
+        // calculating number of digits
+        while(temp!=0){
+            d=temp%10;   
+            temp = temp/10;
+            counter++;
+         }
+        
+        System.out.println("number of digits: " + counter);
+        
+        // calculating the sum of the powers
+        temp= num;
+        while(temp!=0)
+        {
+            d=temp%10;   
+            temp = temp/10;
+            sum+=Math.pow(d, counter);
+        }
+        
+        System.out.println("The sum of the powers = " + sum);
+        
+        if(sum == num)
+        {
+            System.out.println("The number is an armstrong number");
+        }
+        }
+    } 
+
+  python: |
+
+    n = int(input('Enter the value of n: '))
+
+    counter = 0
+    temp = n
+
+    # get the number of digits
+    while temp != 0:
+        d = temp % 10
+        temp = int(temp/10)
+        counter += 1
+
+    print("Number of digits =", counter)
+
+    # get the sum of the powers
+    temp = n
+    s = 0
+    while temp != 0:
+        d = temp % 10
+        temp = int(temp/10)
+        s += d**counter
+
+    print("Sum of the powers =", s)
+
+    if s == n:
+        print("Armstrong Number")
+
+- title: |
     Take 2 inputs from the user, **START** and **COUNT** - both integers
     WAP, which prints out COUNT number of prime numbers starting from START
     For example - let's say the user inputs **START = 72** and **COUNT = 5**
