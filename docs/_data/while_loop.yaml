@@ -148,3 +148,173 @@ programs:
       print("armstrong number")
     else:
       print("not an armstrong number")
+
+- title: |
+
+    WAP to take a 5 digit number from user and display the product of largest and 
+    second largest digit of the number<br>
+    For Example: If the input is 69231, the product will be (9 * 6) = 54
+
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+      public static void main()
+      {
+        Scanner sc = new Scanner(System.in);
+        int n, r, ld, sld, count = 0;
+        boolean flag;
+        
+        System.out.println("Enter the number: ");
+        n = sc.nextInt();
+
+        // initialize
+        ld = -1;
+        sld = -1;
+        
+        // extract digits
+        while (n != 0)
+        {
+            r = n % 10;
+            n = n/10;
+            
+            // count the digits
+            count++;
+            
+            if ( ld < r )
+            {
+              if ( sld < ld)
+                sld = ld;
+              ld = r;
+            }
+            else if ( ld > r && sld < r)
+            {
+              sld = r;
+            }
+        }
+        
+        // check if 5 digits
+        if (count == 5)
+        {
+            System.out.println("Largest Digit: " + ld);
+            System.out.println("Second Largest Digit: " + sld);
+            System.out.println("Product = " + (ld * sld));
+        }
+        else
+            System.out.println("Number must be of 5 digits");
+      }
+    }
+
+  python: |
+
+    # enter the number
+    n = int(input('enter number: '))
+
+    count = 0
+
+    ld = -1
+    sld = -1
+
+    # extract digits
+    while n != 0:
+    
+      r = n % 10
+      n = int(n/10)
+
+      # count the number of digits
+      count += 1
+
+      if ld < r:
+        if sld < ld:
+            sld = ld
+        ld = r
+      elif ld > r and sld < r:
+        sld = r
+
+    # print out if 5 digits
+    if count == 5:
+      print('Largest Digit: ', ld)
+      print('Second Largest Digit: ', sld)
+      print('Product: ', ld * sld)
+    else:
+      print('Number should be of 5 digits')
+
+
+- title: |
+
+    WAP to enter a 3 digit positive number from user and print the LCM of the digits of the number<br>
+    For Example: If the input is 664, LCM of digits of the number 6, 6, 4 is 12
+
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+      public static void main()
+      {
+        Scanner sc = new Scanner(System.in);
+        int n, d1, d2, d3, max, lcm;
+        System.out.println("Enter the number: ");
+        n = sc.nextInt();
+        
+        // get the 3 digits
+        d1 = n % 10;
+        n /= 10;
+        d2 = n % 10;
+        d3 = n / 10;
+        System.out.println(d1 + "," + d2 + "," + d3);
+        
+        // find the largest
+        max = d1;
+        if ((d1 >= d2) && (d1 >= d3)) 
+            max = d1;
+        else if ((d2 >= d1) && (d2 >= d3)) 
+            max = d2;
+        else if ((d3 >= d1) && (d3 >= d2)) 
+            max = d3;
+            
+        // find lcm
+        lcm = max;
+        while (true)
+        {
+            if ((lcm % d1 == 0) && (lcm % d2 == 0) && (lcm % d3 == 0))
+                break;
+            
+            lcm += max;
+        }
+        
+        System.out.println("lcm is " + lcm);
+      }
+    }
+
+  python: |
+
+    # enter the number
+    n = int(input('enter number: '))
+
+    # get the 3 digits
+    d1 = n % 10
+    n = int(n / 10)
+    d2 = n % 10
+    d3 = int(n / 10)
+    print(d1, d2, d3)
+        
+    # find the largest
+    mx = d1
+    if (d1 >= d2) and (d1 >= d3):
+      mx = d1
+    elif (d2 >= d1) and (d2 >= d3):
+      mx = d2
+    elif (d3 >= d1) and (d3 >= d2):
+      mx = d3
+            
+    # find lcm
+    lcm = mx
+    while True:
+      if (lcm % d1 == 0) and (lcm % d2 == 0) and (lcm % d3 == 0):
+        break
+            
+      lcm += mx
+
+    print('LCM is', lcm)

@@ -464,3 +464,65 @@ programs:
 
 - title: |
     WAP to display 10 different numbers from the user and display the greatest and the least number from the set.
+
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        Scanner sc = new Scanner(System.in);
+        int n, max, min, i;
+        
+        // enter the first number
+        System.out.println("Enter number 1");
+        n = sc.nextInt();
+        
+        max = n;
+        min = n;
+        
+        // enter the remaining numbers
+        for (i = 2; i <= 10; i++)
+        {
+            System.out.println("Enter number " + i);
+            n = sc.nextInt();
+            
+            // check if more than max
+            if (n > max)
+                max = n;
+                
+            // check if less than min
+            if (n < min)
+                min = n;
+        }
+        
+        // print out max and min
+        System.out.println("Maximum Number: " + max);
+        System.out.println("Minimum Number: " + min);
+        }
+    }
+
+  python: |
+
+    # enter the first number
+    n = int(input('enter number 1: '))
+
+    # initialize the maximum and minimum numbers
+    mx = n
+    mn = n
+
+    # enter the rest of the numbers
+    for i in range(2, 11, 1):
+        n = int(input('enter number ' + str(i) + ': '))
+
+        # if more than max
+        if n > mx:
+            mx = n
+
+        # if less than min
+        if n < mn:
+            mn = n
+
+    print('Maximum number: ', mx)
+    print('Minimum number: ', mn)    

@@ -328,3 +328,100 @@ programs:
         if flag:
             print(n)
             break
+
+
+- title: |
+    WAP that will take a number that contains atleast 3 digits and display 
+    the difference between sum of all composite digits 
+    and product of all prime digits in the number<br>
+    For Example: If the input is 2563, the difference is  6 - 30 = -24
+
+  code: |
+
+    import java.util.*;
+    public class Test
+    {
+        public static void main()
+        {
+        Scanner sc = new Scanner(System.in);
+        int n, i, digit, s = 0, p = 1, count = 0;
+        boolean flag;
+        
+        System.out.println("Enter the number: ");
+        n = sc.nextInt();
+        
+        // extract digits
+        while (n != 0)
+        {
+            digit = n % 10;
+            n = n/10;
+            
+            // count the number of digits
+            count++;
+            
+            // check if digit is prime or composite
+            flag = true;
+            for (i = 2; i < digit; i++)
+            {
+                if (digit % i == 0)   
+                {
+                    flag = false;
+                    break;
+                }
+            }
+            
+            // prime
+            if (flag)
+                p *= digit;
+            // composite
+            else
+                s += digit;
+        }
+        
+        // check if less than 3 digits
+        if (count < 3)
+            System.out.println("Number must be atleast 3 digits");
+        else
+            System.out.println("Difference is " + (s - p));
+        }
+    }
+
+  python: |
+
+    # enter the number
+    n = int(input('enter number: '))
+
+    count = 0
+    s = 0
+    p = 1
+
+    # extract digits
+    while n != 0:
+    
+        digit = n % 10
+        n = int(n/10)
+
+        # count the number of digits
+        count += 1
+
+        # check if prime
+        prime = True
+        for i in range(2,digit,1):
+            if digit % i == 0:
+                prime = False
+                break
+
+        # prime
+        if prime:
+            p *= digit
+        # composite
+        else:
+            s += digit
+
+    # check if 3 digits or more
+    if count < 3:
+        print('Number must be 3 digits or more')
+    else:
+        print('Difference is', (s - p))
+
+

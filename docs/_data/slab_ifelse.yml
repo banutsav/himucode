@@ -60,6 +60,68 @@ programs:
     print('total bill :', c)
 
 - title: |
+    WAP to input the electricity units consumed, then 
+    calculate and display the electricity bill depending on the slab given below: 
+    - For first 50 units  Rs 0.50 /unit
+    - For next 120 units  Rs. 0.85 /unit
+    - For next 130 units  Rs. 1.20 / unit
+    - For unit above 300 units    Rs. 1.75/ unit
+    <br>Add a surcharge of 20% and Govt. Tax of 15.5% on the bill to calculate the total bill 
+    to be paid by the customer
+
+  code: |
+
+    import java.util.*;
+    class slab_3
+    {
+        public static void main()
+        {
+        Scanner j= new Scanner(System.in);
+        double a,b,c;
+        System.out.println("enter the total electricity units");
+        a = j.nextDouble();
+    
+        if(a<=50)
+        {
+            b=(0.5*a);
+        }
+        else if((a>50)&&(a<=170))
+        {
+            b=(50*0.5)+((a-50)*0.85);
+        }
+        else if((a>170)&&(a<=300))
+        {
+            b=(50*0.5)+(120*0.85)+((a-170)*1.2);
+        }
+        else 
+        {
+            b=(50*0.5)+(120*0.85)+(130*1.2)+((a-300)*1.75);
+        }
+        
+        // add surcharge and tax
+        c = ((20*b)/100) + ((15.5*b)/100) + b;
+        System.out.println(c + " is your total bill");
+        }
+    }
+
+  python: |
+
+    a = int(input('enter the units consumed  : '))
+    if a <= 50:
+        b = (0.5*a)
+    elif a > 50 and a <= 170:
+        b = (50*0.5) + ((a-50)*0.85)
+    elif a > 170 and a <= 300:
+        b = (50*0.5) + (120*0.85) + ((a-170)*1.2)
+    else:
+        b = (50*0.5) + (120*0.85) + (130*1.2) + ((a-300)*1.75)
+
+    print('basic bill :', b)
+    c = ((20*b)/100) + ((15.5*b)/100) + b
+    print('total bill :', c)
+
+
+- title: |
     WAP to calculate the tax the person has to pay, based on their income.
     - If the income is less than 2,50,000 there is no tax. 
     - If the income is above 2,50,000 but below 5,00,000 : the tax will be 5% of the income above 2,50,000. 
