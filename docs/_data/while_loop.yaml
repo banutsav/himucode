@@ -89,6 +89,75 @@ programs:
     print("sum of +ve even numbers : ", pe)
     print("sum of -ve odd numbers : ", no)
 
+- title: |
+     An `Automorphic Number` is a number which is contained in the last digit(s) of it's square<br>
+     For example: 25, since 25<sup>2</sup> = 625 and 25 is contained in the last digit(s) of 625
+     <br>WAP to input a number and check whether it is an `Automorphic Number` or not
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class Test
+    {
+      public static void main()
+      {
+        int n, d, temp;
+        double count = 0, last, s;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        n = sc.nextInt();
+        
+        // square the number
+        s = n * n;
+        System.out.println("Square = " + s);
+        
+        // count how many digits
+        temp = n;
+        while (temp != 0)
+        {
+            d = temp % 10;
+            temp = temp / 10;
+            count++;
+        }
+        
+        // extract the last digits
+        last = s % (Math.pow(10,count));
+        System.out.println("Last Digit(s) = " + last);
+        if (last == n)
+            System.out.println("Automorphic");
+        else
+            System.out.println("Not Automorphic");
+      }
+    }
+
+  python: |
+
+    # enter the number
+    n = int(input('enter number: '))
+
+    # square the number
+    s = n * n
+    print("Square =", s)
+        
+    # count how many digits
+    temp = n
+    count = 0
+    while temp != 0:
+      d = temp % 10
+      temp = int(temp / 10)
+      count += 1  
+
+    # extract the last digits
+    print("Digits: ", count)
+    last = s % (10**count)
+    print("Last Digit(s) =", last)
+
+    if last == n:
+      print("Automorphic")
+    else:
+      print("Not Automorphic")
+
 
 - title: |
     An **Armstrong number** of 3 digits is a 3-digit number
