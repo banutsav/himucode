@@ -387,3 +387,70 @@ programs:
       lcm += mx
 
     print('LCM is', lcm)
+
+- title: |
+    WAP to input a number and check whether it is a `Spy Number`<br>
+    A number is a `Spy Number` if the sum of it's digits equals the product of it's digits
+    . For example, consider the number 1124 - the sum of it's digits is 1 + 1 + 2 + 4 = 8 
+    and the product of it's digits is 1 * 1 * 2 * 4 = 8
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class Test
+    {
+      public static void main()
+      {
+        int n, d, s = 0, p = 1;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number: ");
+        n = sc.nextInt();
+        
+        // extract digits
+        while (n != 0)
+        {
+            d = n % 10;
+            n = n / 10;
+            
+            // calculate sum and product
+            s += d;
+            p *= d;
+        }
+        System.out.println("Sum of digits: " + s);
+        System.out.println("Product of digits: " + p);
+        
+        if (s == p)
+        {
+            System.out.println("Spy Number");
+        }
+        else
+        {
+            System.out.println("Not a Spy Number");
+        }
+      }
+    }
+
+  python: |
+
+    # enter the number
+    n = int(input('enter number: '))
+        
+    # extract digits
+    s = 0
+    p = 1
+    while n != 0:
+      d = n % 10
+      n = int(n / 10)
+
+      # calculate sum and product
+      s += d
+      p *= d
+
+    print("sum of digits:", s)
+    print("product of digits:", p)
+
+    if s == p:
+      print("Spy Number")
+    else:
+      print("Not a Spy Number")
