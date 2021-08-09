@@ -110,6 +110,67 @@ programs:
 
 
 - title: |
+    WAP to input Principal, Rate and Time. Calculate and display the amount which is **compounded annualy** for 
+    each year by using the formula <br>`Interest = (Principal * Rate * Time)/100`<br>
+    For Example, if **Principal** = 2000, **Rate** = 10, **Time in Years** = 5 then <br>
+    Amount after 1.0 year(s) = 2200.0<br>
+    Amount after 2.0 year(s) = 2420.0<br>
+    Amount after 3.0 year(s) = 2662.0<br>
+    Amount after 4.0 year(s) = 2928.2<br>
+    Amount after 5.0 year(s) = 3221.02<br>
+    Finally, **Total Interest** = 1221.02
+
+  code: |
+
+    import java.util.*;
+    public class MyClass {
+    public static void main(String args[]) {
+      double principal, rate, time, interest, i, x;
+      Scanner sc = new Scanner(System.in);
+      
+      // take inputs
+      System.out.println("Enter Principal: ");
+      principal = sc.nextDouble();
+      
+      System.out.println("Enter Rate: ");
+      rate = sc.nextDouble();
+      
+      System.out.println("Enter Time in Years: ");
+      time = sc.nextDouble();
+      
+      // store the principal
+      x = principal;
+      
+      // calculate amount for each year
+      for (i = 1; i <= time; i++)
+      {
+          interest = (principal * rate)/100;
+          principal = principal + interest;
+          System.out.println("Amount after " + i + " year(s) = " + principal);
+      }
+      
+      System.out.println("Total Interest : " + (principal - x));
+    }
+    }
+
+  python: |
+
+    p = int(input("Enter Principal: "))
+    r = int(input("Enter Rate: "))
+    t = int(input("Enter Time: "))
+
+    # store the principal
+    x = p
+
+    for i in range(1, t + 1, 1):
+        p = p + ((p * r)/100)
+        print("Amount after ", i, " year(s):", p)
+
+    # Total interest
+    print("Total Interest:", (p - x))
+
+
+- title: |
     WAP to input a number n from the user.
     Then take n numbers as input from the user using a for loop and find the sum of all the numbers
 

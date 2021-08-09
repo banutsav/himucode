@@ -39,6 +39,59 @@ programs:
     print('sum of digits =', s)
 
 - title: |
+    WAP to input a number and then reverse the number. For example if the original number is 2356, the reverse
+     of the number will be 6532. Then check if the number is a `Palindrome` i.e. the original and the reversed number 
+     are the same. For example, the number 23432 is a `Palindrome`, since the reverse of the number is also 23432
+
+  code: |
+
+    import java.util.*;
+    public class MyClass 
+    {
+      public static void main(String args[]) 
+      {
+      
+      int n, temp, d, rev = 0;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter a number");
+      n = sc.nextInt();
+      
+      temp = n;
+      
+      // extract digits
+      while (temp != 0)
+      {
+          d = temp % 10;
+          temp /= 10;
+          rev = (10 * rev) + d;
+      }
+      
+      System.out.println("Reversed Number : " + rev);
+      
+      if (n == rev)
+        System.out.println("The number is a Palindrome");
+      }
+    }
+
+  python: |
+
+    n = int(input("Enter a Number: "))
+    temp = n
+    rev = 0
+
+    # reverse the number
+    while temp != 0:
+      d = temp % 10
+      temp = int(temp / 10)
+      rev = (rev * 10) + d
+    
+    print ("Reverse of the number =", rev)
+
+    # check if palindrom
+    if n == rev:
+      print("Number is a Palindrome")     
+
+- title: |
     Use a while loop to keep entering numbers except 0 - **the loop will stop once the user enters a 0**. 
     Within the loop, keep summing up all the positive even numbers and the negative odd numbers. 
     Once the loop stops, print out both the sums
