@@ -213,10 +213,10 @@ programs:
 
 
 - title: |
-    An **Armstrong number** of 3 digits is a 3-digit number
+    An `Armstrong number` of 3 digits is a 3-digit number
     , the sum of cubes of each digits is equal to the number itself. 
-    For example: **153 = 1x1x1 + 5x5x5 + 3x3x3**
-    <br>WAP to input a 3 digit number and check if it is an Armstrong Number
+    For example: 153 = 1x1x1 + 5x5x5 + 3x3x3
+    <br>WAP to input a 3 digit number and check if it is an `Armstrong Number`
 
   code: |
 
@@ -440,6 +440,89 @@ programs:
       lcm += mx
 
     print('LCM is', lcm)
+
+- title: |
+    WAP to input a number and find if it is `Disarium` or not. 
+    A number is called `Disarium` if the sum of its digits powered with their respective positions is equal to the number itself<br>
+    For Example: 135 is a `Disarium number` as 1<sup>1</sup> + 3<sup>2</sup> + 5<sup>3</sup> = 135
+
+  code: |
+
+    import java.util.*;
+    import java.lang.*;
+    public class MyClass {
+      public static void main(String args[]) 
+      {
+      int n, temp, count_digits = 0, digit;
+      double sum = 0, x;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter a Number");
+      n = sc.nextInt();
+      
+      // count the number of digits
+      temp = n;
+      while (temp != 0)
+      {
+          temp = temp / 10;
+          count_digits++; 
+      }
+      System.out.println("Number of digits: " + count_digits);
+      
+      // calculate sum
+      temp = n;
+      while (temp != 0)
+      {
+          // Get the digit
+          digit = temp % 10;
+          
+          // Sum the digits by powering according to
+          // the positions
+          x = Math.pow(digit, count_digits);
+          sum = sum + x;
+          count_digits--;
+          temp = temp/10;
+          
+      }
+      
+      System.out.println("Sum = " + sum);
+      if (sum == n)
+        System.out.println("Disarium Number");
+      
+      }
+    }
+
+  python: |
+    
+    n = int(input("Enter a Number: "))
+    count_digits = 0
+    temp = n
+
+    # count number of digits
+    while temp != 0:
+    
+      temp = int(temp / 10)
+      count_digits += 1
+    
+    # calculate sum
+    temp = n
+    s = 0
+    while temp != 0:
+      # Get the digit
+      digit = temp % 10
+    
+      # Sum the digits by powering according to
+      # the positions
+    
+      x = digit**count_digits
+      s = s + x
+      count_digits -= 1
+    
+      temp = int(temp / 10)
+    
+    print('Sum =', s)
+
+    if s == n:
+      print("Disarium Number")
 
 - title: |
     WAP to input a number and check whether it is a `Spy Number`<br>
