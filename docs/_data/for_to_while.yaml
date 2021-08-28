@@ -1,0 +1,81 @@
+while_to_for_title: Loop Conversions
+questions:
+
+- code: |
+
+    int i;
+    for(i = 0; i < 10; i++)
+    {
+    }
+
+  converted: |
+
+    int i = 0;
+    while(i < 10)
+    {
+      i++;
+    }
+
+- code: |
+
+    int i=1;
+    int d=5;
+    while(i<=5)
+    {
+      d=d*2
+      System.out.println(d);
+      i++;
+    }
+
+  converted: |
+
+    for(int i=1, d=5; i<=5; i++)
+    {
+      d = d * 2;
+      System.out.println(d);
+    }
+
+- code: |
+    
+    for(int m=5, n=10; n >=1; n--)
+    {
+      System.out.println(m*n);
+    }
+
+  converted: |
+
+    int m = 5, n = 10;
+    while (n>=1)
+    {
+      System.out.println(m * n);
+      n--;
+    }
+
+- code: |
+
+    int s=0;
+    for(int x=1; x<=25; x+=2)
+      s+=x;
+
+  converted: |
+
+    int x=1,s=0;
+    while (x<=25){
+      s +=x;
+      x+=2;
+    }
+
+- code: |
+
+    int x,c;
+    for (x=10, c=20; c>=10; c = c - 2)
+      x++;
+
+  converted: |
+
+    int x=10,c=20;
+    while(c>=10)
+    {
+      x++;
+      c=c-2;
+    }

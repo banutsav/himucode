@@ -1,0 +1,141 @@
+output_while_loop_title: Find the Output - While Loop based
+questions:
+
+- code: |
+
+    int x = 1, i = 2;
+    while(++i <= 5)    
+    {
+      x *= i;
+    }
+    System.out.println(x);
+
+  output: |
+
+    60
+
+- code: |
+
+    int i = 1;
+    int d = 5;
+    while(i <= 5)
+    {
+      d = d * 2;
+      System.out.println(d);
+      i++;
+    }
+
+  output: |
+
+    10
+    20
+    40
+    80
+    
+
+    160
+
+- code: |
+
+    int m = 5, n = 10;
+    while (n >= 1)
+    {
+        System.out.println(m * n);
+        n--;
+    }
+
+  output: |
+
+    50
+    45
+    40
+    35
+    30
+    25
+    20
+    15
+    10
+    5
+
+- code: |
+
+    int x = 1, s = 0;
+    while (x <= 7)
+    {
+      s += x;
+      x += 2;
+    }
+    System.out.println(s);
+
+  output: |
+
+    16
+
+- code: |
+
+    int x = 5;
+    int y = 75;
+    while (x <= y) 
+    {
+      y = y/x;
+      System.out.println(y);
+    }
+
+  output: |
+
+    15
+    3
+
+- code: |
+
+    int x = 10, c = 20;
+    while(c >= 10)
+    {
+      x++;
+      c = c - 2;
+      System.out.println(c);
+    }
+
+  output: |
+
+    18
+    16
+    14
+    12
+    10
+    8
+
+- code: |
+
+    int p = 200;
+    while(true)
+    {
+      if(p < 100)
+        break;
+      p = p - 20;
+    }
+    System.out.println(p);
+
+  output: |
+
+    80
+
+- code: |
+
+    int x = 0;
+    while(x++ < 20) 
+    {
+      if(x % 2 == 0)
+        System.out.println("Simply");
+      else if (x == 9)
+        break;
+      else
+        continue;
+    }
+
+  output: |
+
+    Simply
+    Simply
+    Simply
+    Simply

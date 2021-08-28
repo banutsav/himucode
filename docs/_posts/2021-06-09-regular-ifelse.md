@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Regular If-Else Programs
+tag: Programming Questions
 ---
 
 {% for item in site.data.regular_ifelse.programs %}

@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  Find the Output - Loop based
+title:  Find the Output - For Loop based
+tag: Java Theory Questions 
 ---
 
-{% for item in site.data.output_loop.questions %}
+{% for item in site.data.output_for_loop.questions %}
 
 <code>Code Sample {{ forloop.index }}</code>
 {% highlight java %}

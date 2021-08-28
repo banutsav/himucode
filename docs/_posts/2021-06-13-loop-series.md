@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Loop Programs based on Mathematical Series
+tag: Programming Questions
 ---
 
 {% for item in site.data.loop_series.programs %}

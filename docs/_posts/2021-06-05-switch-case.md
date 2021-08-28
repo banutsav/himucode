@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Switch Case / Menu Driven Programs
+tag: Programming Questions
 ---
 
 {% for item in site.data.switch_case.programs %}

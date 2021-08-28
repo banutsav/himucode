@@ -1,4 +1,4 @@
-output_loop_title: Find the Output - Loop based
+output_loop_title: Find the Output - For Loop based
 questions:
 
 - code: |
@@ -19,18 +19,40 @@ questions:
 
 - code: |
 
-
-
+    for (int i = 0; i < 10; i++) {
+      if (i == 4) {
+        break;
+      }
+      System.out.println(i);
+    }
 
   output: |
 
-    i = 0
-    i = 1
-    i = 2
-    i = 3
-    i = 4
-    i = 5
-    i after the loop = 6
+    0
+    1
+    2
+    3
+
+- code: |
+    
+    for (int i = 0; i < 10; i++) {
+      if (i == 4) {
+        continue;
+      }
+      System.out.println(i);
+    }
+
+  output: |
+
+    0
+    1
+    2
+    3
+    5
+    6
+    7
+    8
+    9
 
 - code: |
 
@@ -148,3 +170,22 @@ questions:
   output: |
 
     42
+
+- code: |
+
+    for(int m = 5; m <= 20; m += 5)
+    {
+      System.out.println("Hello!");
+      if(m % 3 == 0)
+        break;
+      else if(m % 5 == 0)
+        continue;
+      System.out.println(m);
+        
+    }
+
+  output: |
+
+    Hello!
+    Hello!
+    Hello!

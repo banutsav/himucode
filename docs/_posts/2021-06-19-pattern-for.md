@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Pattern Generation Programs
+tag: Programming Questions
 ---
 
 {% for item in site.data.pattern_for.programs %}

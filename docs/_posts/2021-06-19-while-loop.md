@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  While Loop based Programs
+tag: Programming Questions
 ---
 
 {% for item in site.data.while_loop.programs %}

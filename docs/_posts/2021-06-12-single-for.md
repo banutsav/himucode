@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Single For Loop Programs
+tag: Programming Questions
 ---
 
 {% for item in site.data.single_for.programs %}

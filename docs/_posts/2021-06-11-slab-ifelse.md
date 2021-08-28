@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Slab Based If-Else Programs
+tag: Programming Questions
 ---
 
 {% for item in site.data.slab_ifelse.programs %}
