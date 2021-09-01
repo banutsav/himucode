@@ -6,8 +6,8 @@ description:         'This website is a collection of questions and answers for 
 just starting to program. If you want to schedule online classes for your kids 
 then Get in Touch'
 
-url:                 "" #"https://banutsav.github.io"
-baseurl:             "" #"/himucode"
+url:                 "https://banutsav.github.io"
+baseurl:             "/himucode"
 paginate:            5
 permalink:           pretty
 
